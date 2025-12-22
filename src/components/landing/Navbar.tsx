@@ -39,8 +39,12 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost">Prijava</Button>
-            <Button variant="gradient">Brezplačni preizkus</Button>
+            <Button variant="ghost" asChild>
+              <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Prijava</a>
+            </Button>
+            <Button variant="gradient" asChild>
+              <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Brezplačni preizkus</a>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -68,8 +72,12 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
-                <Button variant="ghost" className="justify-start">Prijava</Button>
-                <Button variant="gradient">Brezplačni preizkus</Button>
+                <Button variant="ghost" className="justify-start" asChild>
+                  <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Prijava</a>
+                </Button>
+                <Button variant="gradient" asChild>
+                  <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Brezplačni preizkus</a>
+                </Button>
               </div>
             </div>
           </div>

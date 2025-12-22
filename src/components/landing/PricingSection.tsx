@@ -56,9 +56,11 @@ const PricingSection = () => {
               </ul>
               
               {/* CTA */}
-              <Button variant="gradient" size="xl" className="w-full">
-                Začnite brezplačni 14-dnevni preizkus
-                <ArrowRight className="w-5 h-5" />
+              <Button variant="gradient" size="xl" className="w-full" asChild>
+                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
+                  Začnite brezplačni 14-dnevni preizkus
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
               
               <p className="text-center text-sm text-muted-foreground mt-4">
