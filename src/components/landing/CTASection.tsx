@@ -22,9 +22,11 @@ const CTASection = () => {
               <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
                 Brezplačni preizkus. Brez kreditne kartice. Brez obveznosti.
               </p>
-              <Button variant="hero" size="xl">
-                Začnite brezplačno
-                <ArrowRight className="w-5 h-5" />
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
+                  Začnite brezplačno
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
             </div>
           </div>

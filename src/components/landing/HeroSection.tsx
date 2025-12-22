@@ -26,9 +26,11 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="xl">
-                Preizkusite brezplačno 14 dni
-                <ArrowRight className="w-5 h-5" />
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
+                  Preizkusite brezplačno 14 dni
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
             </div>
             
