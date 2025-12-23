@@ -65,10 +65,10 @@ const Footer = () => {
                 <a href="#o-nas" className="hover:text-background transition-colors">O nas</a>
               </li>
               <li>
-                <a href="#pogoji" className="hover:text-background transition-colors">Pogoji uporabe</a>
+                <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">Pogoji uporabe</Link>
               </li>
               <li>
-                <a href="#zasebnost" className="hover:text-background transition-colors">Politika zasebnosti</a>
+                <Link to="/zasebnost" className="hover:text-background transition-colors">Politika zasebnosti</Link>
               </li>
             </ul>
           </div>
