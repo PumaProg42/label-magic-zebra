@@ -1,4 +1,5 @@
 import { Printer, Mail, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -51,7 +52,7 @@ const Footer = () => {
                 <a href="#kontakt" className="hover:text-background transition-colors">Kontakt</a>
               </li>
               <li>
-                <a href="#dokumentacija" className="hover:text-background transition-colors">Dokumentacija</a>
+                <Link to="/dokumentacija" className="hover:text-background transition-colors">Dokumentacija</Link>
               </li>
             </ul>
           </div>
