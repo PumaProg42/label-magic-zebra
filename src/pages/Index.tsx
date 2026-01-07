@@ -3,7 +3,7 @@ import HeroSection from "@/components/landing/HeroSection";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
-import PrintersSection from "@/components/landing/PrintersSection";
+
 import UseCasesSection from "@/components/landing/UseCasesSection";
 import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
@@ -22,9 +22,6 @@ const Index = () => {
         </div>
         <div id="funkcionalnosti">
           <FeaturesSection />
-        </div>
-        <div id="tiskalniki">
-          <PrintersSection />
         </div>
         <UseCasesSection />
         <div id="cenik">
