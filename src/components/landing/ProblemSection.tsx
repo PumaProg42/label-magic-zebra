@@ -1,7 +1,7 @@
 import { Brain, Monitor, Plug, Sparkles } from "lucide-react";
 const problems = [{
   icon: Brain,
-  title: "Zebra software je preveč zapleten",
+  title: "Vendor-locked software",
   description: "ZebraDesigner in podobni programi zahtevajo ure učenja. Vi potrebujete etiketo zdaj."
 }, {
   icon: Monitor,
