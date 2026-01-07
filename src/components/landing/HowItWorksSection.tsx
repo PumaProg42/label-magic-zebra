@@ -20,7 +20,7 @@ const HowItWorksSection = () => {
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Label Designer PTI simplifies  <span className="gradient-text">everything</span>
+            Create your label in    <span className="gradient-text">3 steps </span>
           </h2>
         </div>
         
