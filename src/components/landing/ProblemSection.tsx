@@ -47,7 +47,7 @@ const ProblemSection = () => {
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    Label Designer PTI vse to <span className="gradient-text">poenostavi</span>
+                    Label Designer PTI simplifies  <span className="gradient-text">everything</span>
                   </h3>
                   <p className="text-lg text-muted-foreground max-w-2xl">
                     Odprite brskalnik, oblikujte etiketo z vlečenjem elementov, kliknite Natisni. Končano. Deluje na vsakem računalniku, brez namestitve, brez licenc za vsako delovno postajo.
