@@ -21,7 +21,7 @@ const features = [{
   description: "Ravnila v milimetrih, pametne vodilne črte za poravnavo, koordinate v pikslih. Profesionalna natančnost."
 }, {
   icon: Cloud,
-  title: "Shranjevanje v oblaku",
+  title: "Cloud storage",
   description: "Shranite etikete v oblak in dostopajte do njih s kateregakoli računalnika. Nikoli več izgubljenih datotek."
 }];
 const FeaturesSection = () => {
