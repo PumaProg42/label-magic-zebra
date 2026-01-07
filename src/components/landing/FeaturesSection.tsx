@@ -18,7 +18,7 @@ const features = [{
 }, {
   icon: Ruler,
   title: "Precise positioning",
-  description: "Ravnila v milimetrih, pametne vodilne črte za poravnavo, koordinate v pikslih. Profesionalna natančnost."
+  description: "Millimeter rulers, smart alignment guides and pixel-accurate coordinates for professional precision."
 }, {
   icon: Cloud,
   title: "Cloud storage",
