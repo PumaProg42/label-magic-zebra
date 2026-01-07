@@ -7,32 +7,32 @@ import {
 
 const faqs = [
   {
-    question: "Ali potrebujem kaj namestiti?",
-    answer: "Ne. Label Designer PTI deluje neposredno v brskalniku (Chrome, Edge, Firefox). Za tiskanje preko omrežja potrebujete le IP naslov vašega Zebra tiskalnika.",
+    question: "Is the application tied to a specific printer manufacturer?",
+    answer: "No. The application is fully vendor-agnostic. It works with all thermal printers that support standard printer languages such as ZPL, TSPL, EPL, CPCL, or RAW output.",
   },
   {
-    question: "Kateri Zebra tiskalniki so podprti?",
-    answer: "Vsi Zebra termični tiskalniki, ki podpirajo ZPL jezik — to so praktično vsi modeli (ZD420, ZT410, GK420d, itd.). Podpiramo resolucije 203, 300 in 600 DPI.",
+    question: "Do I need special drivers or additional software for printing?",
+    answer: "Not necessarily. Labels can be printed directly over the network (IP + port) without drivers. If your environment requires it, alternative options are available, such as a local print agent or file export for external printing.",
   },
   {
-    question: "Kako povežem tiskalnik?",
-    answer: "Vaš Zebra tiskalnik mora biti povezan v omrežje (ethernet ali WiFi). Vnesite njegov IP naslov v aplikacijo in lahko tiskate. Alternativno lahko izvozite ZPL kodo za vaš ERP sistem.",
+    question: "Are label dimensions and element positions accurate?",
+    answer: "Yes. The application uses a precise WYSIWYG editor, where all positions and sizes are calculated based on the actual label dimensions and the selected DPI (203 / 300 / 600).",
   },
   {
-    question: "Kaj so placeholderji?",
-    answer: "Placeholderji so dinamična polja (npr. {{NAZIV_IZDELKA}}), ki jih lahko zamenja vaš ERP ali WMS sistem. Tako ustvarite predlogo etikete enkrat, podatke pa posreduje vaš sistem.",
+    question: "Can I save and reuse label templates?",
+    answer: "Absolutely. Labels can be saved as templates, reopened at any time, modified, and reused, significantly speeding up day-to-day operations.",
   },
   {
-    question: "Ali lahko preizkusim brezplačno?",
-    answer: "Da! Ponujamo 14-dnevni brezplačni preizkus z vsemi funkcionalnostmi. Kreditna kartica ni potrebna.",
+    question: "Is the application GDPR compliant?",
+    answer: "Yes. The application is designed according to GDPR principles (privacy by design). Only the data required for proper operation of the service is processed (such as user accounts and saved label templates).",
   },
   {
-    question: "Kako prekličem naročnino?",
-    answer: "Naročnino lahko kadarkoli prekličete v uporabniškem portalu. Brez vprašanj, brez skritih stroškov.",
+    question: "What personal data is stored?",
+    answer: "Only essential data required to provide the service is stored: Email address (for authentication), User ID, and saved label templates (if the user chooses to store them). The content of the labels remains fully under the user's control.",
   },
   {
-    question: "Ali so moje etikete varno shranjene?",
-    answer: "Da. Vse etikete so shranjene v varnem oblaku in dostopne samo vam. Uporabljamo enkripcijo in varno avtentikacijo.",
+    question: "Where is the data stored?",
+    answer: "Data is stored in a secure cloud environment with restricted access and appropriate security mechanisms (authentication and user-level data isolation). Each user can access only their own data.",
   },
 ];
 
@@ -42,7 +42,7 @@ const FAQSection = () => {
       <div className="container-narrow">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Pogosta <span className="gradient-text">vprašanja</span>
+            <span className="gradient-text">FAQ</span>
           </h2>
         </div>
         
