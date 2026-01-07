@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container-wide py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Logo & description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
@@ -36,7 +36,7 @@ const Footer = () => {
                 <a href="#cenik" className="hover:text-background transition-colors">Pricing</a>
               </li>
               <li>
-                <a href="#tiskalniki" className="hover:text-background transition-colors">Supported printers</a>
+                <a href="#faq" className="hover:text-background transition-colors">FAQ</a>
               </li>
             </ul>
           </div>
@@ -53,22 +53,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/dokumentacija" className="hover:text-background transition-colors">Documentation</Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-3 text-background/70">
-              <li>
-                <a href="#o-nas" className="hover:text-background transition-colors">About us</a>
-              </li>
-              <li>
-                <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">Terms of use</Link>
-              </li>
-              <li>
-                <Link to="/zasebnost" className="hover:text-background transition-colors">Privacy policy</Link>
               </li>
             </ul>
           </div>
