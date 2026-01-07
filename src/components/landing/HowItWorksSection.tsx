@@ -13,7 +13,7 @@ const steps = [{
   icon: Printer,
   step: "03",
   title: "Natisnite na Zebra tiskalnik",
-  description: "Vnesite IP naslov tiskalnika in kliknite Natisni. Etiketa se natisne v sekundah. Lahko tudi izvozite ZPL kodo za vaš ERP sistem."
+  description: "Enter the printer's IP address and click Print. The label is printed within seconds. You can also export the printer-ready code for use in your ERP system."
 }];
 const HowItWorksSection = () => {
   return <section className="section-padding">
