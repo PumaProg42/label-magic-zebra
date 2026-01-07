@@ -3,27 +3,27 @@ import { Warehouse, Truck, ShoppingBag, Factory } from "lucide-react";
 const useCases = [
   {
     icon: Warehouse,
-    title: "Skladiščne etikete",
-    description: "Lokacija police, črtna koda izdelka, naziv in količina. Poenostavite inventuro in iskanje izdelkov.",
-    tag: "Skladišče",
+    title: "Warehouse labels",
+    description: "Shelf location, product barcode, name, and quantity. Simplify inventory and product search.",
+    tag: "Warehouse",
   },
   {
     icon: Truck,
-    title: "Transportne etikete",
-    description: "QR koda za sledenje pošiljke, naslov prejemnika, logotip podjetja. Profesionalne etikete za vsak paket.",
+    title: "Shipping labels",
+    description: "QR code for shipment tracking, recipient address, company logo. Professional labels for every package.",
     tag: "Transport",
   },
   {
     icon: ShoppingBag,
-    title: "Cenovne etikete",
-    description: "EAN-13 črtna koda za blagajno, cena, naziv izdelka. Hitro posodabljanje cen.",
-    tag: "Maloprodaja",
+    title: "Price labels",
+    description: "EAN-13 barcode for checkout, price, product name. Quick price updates.",
+    tag: "Retail",
   },
   {
     icon: Factory,
-    title: "Etikete za sledenje",
-    description: "Serijska številka, Code 128 črtna koda, datum proizvodnje. Popolna sledljivost izdelkov.",
-    tag: "Proizvodnja",
+    title: "Tracking labels",
+    description: "Serial number, Code 128 barcode, production date. Complete product traceability.",
+    tag: "Manufacturing",
   },
 ];
 
@@ -33,7 +33,7 @@ const UseCasesSection = () => {
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Etikete za <span className="gradient-text">vsako panogo</span>
+            Labels for <span className="gradient-text">every industry</span>
           </h2>
         </div>
         
@@ -62,7 +62,7 @@ const UseCasesSection = () => {
               <div className="px-8 pb-8">
                 <div className="bg-muted/50 rounded-xl p-4 border border-border/50">
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
-                    <span>Primer etikete</span>
+                    <span>Label example</span>
                     <div className="flex gap-1">
                       {[...Array(8)].map((_, i) => (
                         <div key={i} className="w-0.5 h-4 bg-muted-foreground/50" />
