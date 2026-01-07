@@ -1,11 +1,20 @@
 import { Printer, Check } from "lucide-react";
 
 const printerLanguages = [
-  "ZPL",
-  "TSPL",
-  "EPL",
-  "CPCL",
-  "RAW text output",
+  { code: "ZPL", description: "Zebra Programming Language" },
+  { code: "TSPL", description: "TSC Printer Language" },
+  { code: "EPL", description: "Eltron Programming Language" },
+  { code: "CPCL", description: "Comtec Printer Control Language" },
+  { code: "RAW", description: "Raw text output" },
+];
+
+const compatibleBrands = [
+  "Zebra",
+  "TSC",
+  "CAB",
+  "Bixolon",
+  "Honeywell",
+  "SATO",
 ];
 
 const PrintersSection = () => {
@@ -40,18 +49,34 @@ const PrintersSection = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground font-medium">{language}</span>
+                    <div>
+                      <span className="text-foreground font-semibold">{language.code}</span>
+                      <span className="text-muted-foreground ml-2">— {language.description}</span>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
             
             {/* Right - Compatible brands */}
-            <div className="bg-muted/30 p-8 lg:p-12 flex flex-col justify-center">
-              <h3 className="text-xl font-semibold mb-6">Compatible printers</h3>
+            <div className="bg-muted/30 p-8 lg:p-12">
+              <h3 className="text-xl font-semibold mb-6">Compatible brands</h3>
               
-              <p className="text-muted-foreground">
-                Compatible with Zebra, TSC, CAB, Bixolon and many others.
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {compatibleBrands.map((brand, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center gap-2 opacity-0 animate-fade-up"
+                    style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                  >
+                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="font-medium">{brand}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <p className="text-muted-foreground text-sm">
+                ...and many other thermal printers that support standard printer languages.
               </p>
             </div>
           </div>
