@@ -5,7 +5,6 @@ const features = [
   "Unlimited label creation",
   "Cloud storage",
   "Export to ZPL format",
-  "Direct printing to Zebra printers",
   "All barcode and QR code types",
   "Images and logos",
   "Support for 203, 300, and 600 DPI",
@@ -57,7 +56,7 @@ const PricingSection = () => {
               
               {/* CTA */}
               <Button variant="gradient" size="xl" className="w-full" asChild>
-                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.perko-tehtnice.si/">
                   Start your free 14-day trial
                   <ArrowRight className="w-5 h-5" />
                 </a>

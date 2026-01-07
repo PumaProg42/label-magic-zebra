@@ -6,8 +6,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Features", href: "#funkcionalnosti" },
     { name: "How it works", href: "#kako-deluje" },
+    { name: "Features", href: "#funkcionalnosti" },
     { name: "Pricing", href: "#cenik" },
     { name: "FAQ", href: "#faq" },
   ];
@@ -39,11 +39,8 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Login</a>
-            </Button>
             <Button variant="gradient" asChild>
-              <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Free trial</a>
+              <a href="https://app.perko-tehtnice.si/">Dashboard</a>
             </Button>
           </div>
 
@@ -72,11 +69,8 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
-                <Button variant="ghost" className="justify-start" asChild>
-                  <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Login</a>
-                </Button>
                 <Button variant="gradient" asChild>
-                  <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">Free trial</a>
+                  <a href="https://app.perko-tehtnice.si/">Dashboard</a>
                 </Button>
               </div>
             </div>
