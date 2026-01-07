@@ -30,13 +30,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-3 text-background/70">
               <li>
+                <a href="#kako-deluje" className="hover:text-background transition-colors">How it works</a>
+              </li>
+              <li>
                 <a href="#funkcionalnosti" className="hover:text-background transition-colors">Features</a>
               </li>
               <li>
                 <a href="#cenik" className="hover:text-background transition-colors">Pricing</a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-background transition-colors">FAQ</a>
               </li>
             </ul>
           </div>
