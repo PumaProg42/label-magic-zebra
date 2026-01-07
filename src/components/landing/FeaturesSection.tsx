@@ -14,7 +14,7 @@ const features = [{
 }, {
   icon: Image,
   title: "Images and logos",
-  description: "Naložite PNG ali JPG slike. Avtomatično se pretvorijo v format, primeren za termični tisk."
+  description: "Upload PNG or JPG images. They are automatically converted into a format suitable for thermal printing."
 }, {
   icon: Ruler,
   title: "Precise positioning",
