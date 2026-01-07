@@ -10,7 +10,7 @@ const features = [{
 }, {
   icon: QrCode,
   title: "QR codes",
-  description: "Generirajte QR kode za sledenje, spletne povezave ali poljubne podatke. Izberite velikost in stopnjo popravka napak."
+  description: "Generate QR codes for traceability, web links or custom data. Choose size and error correction level."
 }, {
   icon: Image,
   title: "Images and logos",
