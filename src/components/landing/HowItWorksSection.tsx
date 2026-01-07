@@ -8,7 +8,7 @@ const steps = [{
   icon: FileText,
   step: "02",
   title: "Add content",
-  description: "Vnesite podatke za črtne kode, besedilo za etiketo, naložite logotip. Vidite natančen predogled, kako bo etiketa izgledala."
+  description: "Enter barcode data, label text and upload your logo. See an accurate preview of how the label will look when printed."
 }, {
   icon: Printer,
   step: "03",
