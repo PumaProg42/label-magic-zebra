@@ -3,7 +3,7 @@ const steps = [{
   icon: MousePointer2,
   step: "01",
   title: "Design the label",
-  description: "Povlecite besedilo, črtne kode, QR kode in slike na delovno površino. Nastavite velikost etikete v milimetrih in prilagodite DPI vašega tiskalnika."
+  description: "Drag text, barcodes, QR codes and images onto the workspace. Set the label size in millimeters and adjust the DPI to match your printer."
 }, {
   icon: FileText,
   step: "02",
