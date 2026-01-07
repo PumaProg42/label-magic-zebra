@@ -5,7 +5,7 @@ const problems = [{
   description: "ZebraDesigner in podobni programi zahtevajo ure učenja. Vi potrebujete etiketo zdaj."
 }, {
   icon: Monitor,
-  title: "Namestitev na vsak računalnik",
+  title: "Complex desktop installations",
   description: "Licence, namestitve, posodobitve... Za vsako delovno postajo posebej."
 }, {
   icon: Plug,
