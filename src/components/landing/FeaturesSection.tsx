@@ -9,7 +9,7 @@ const features = [{
   description: "EAN-8, EAN-13, Code 128 — z avtomatičnim izračunom kontrolne številke. Nastavite širino in višino po želji."
 }, {
   icon: QrCode,
-  title: "QR kode",
+  title: "QR codes",
   description: "Generirajte QR kode za sledenje, spletne povezave ali poljubne podatke. Izberite velikost in stopnjo popravka napak."
 }, {
   icon: Image,
