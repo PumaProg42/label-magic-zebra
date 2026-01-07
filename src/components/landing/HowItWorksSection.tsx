@@ -1,23 +1,23 @@
-import { MousePointer2, FileText, Printer } from "lucide-react";
+import { MousePointer2, Settings, Printer } from "lucide-react";
 
 const steps = [
   {
     icon: MousePointer2,
     step: "01",
-    title: "Oblikujte etiketo",
-    description: "Povlecite besedilo, črtne kode, QR kode in slike na delovno površino. Nastavite velikost etikete v milimetrih in prilagodite DPI vašega tiskalnika.",
+    title: "Design",
+    description: "Drag & drop text, barcodes, QR codes, shapes and images.",
   },
   {
-    icon: FileText,
+    icon: Settings,
     step: "02",
-    title: "Dodajte vsebino",
-    description: "Vnesite podatke za črtne kode, besedilo za etiketo, naložite logotip. Vidite natančen predogled, kako bo etiketa izgledala.",
+    title: "Configure",
+    description: "Set label size, DPI and printer language.",
   },
   {
     icon: Printer,
     step: "03",
-    title: "Natisnite na Zebra tiskalnik",
-    description: "Vnesite IP naslov tiskalnika in kliknite Natisni. Etiketa se natisne v sekundah. Lahko tudi izvozite ZPL kodo za vaš ERP sistem.",
+    title: "Print or Export",
+    description: "Print directly over the network or export printer-ready files.",
   },
 ];
 
@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Od ideje do natisnjene etikete v <span className="gradient-text">3 korakih</span>
+            How it <span className="gradient-text">works</span>
           </h2>
         </div>
         
