@@ -13,7 +13,7 @@ const features = [{
   description: "Generirajte QR kode za sledenje, spletne povezave ali poljubne podatke. Izberite velikost in stopnjo popravka napak."
 }, {
   icon: Image,
-  title: "Slike in logotipi",
+  title: "Images and logos",
   description: "Naložite PNG ali JPG slike. Avtomatično se pretvorijo v format, primeren za termični tisk."
 }, {
   icon: Ruler,
