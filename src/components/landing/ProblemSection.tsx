@@ -9,7 +9,7 @@ const problems = [{
   description: "Licence, namestitve, posodobitve... Za vsako delovno postajo posebej."
 }, {
   icon: Plug,
-  title: "Povezava s tiskalnikom je nočna mora",
+  title: "Inconsistent print results",
   description: "Gonilniki, nastavitve porta, ZPL koda... Zakaj mora biti tiskanje etiket tako zapleteno?"
 }];
 const ProblemSection = () => {
