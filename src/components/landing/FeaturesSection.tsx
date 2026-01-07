@@ -2,7 +2,7 @@ import { Type, BarChart3, QrCode, Image, Ruler, Cloud } from "lucide-react";
 const features = [{
   icon: Type,
   title: "Text and placeholders",
-  description: "Dodajte fiksno besedilo ali dinamična polja, ki jih zamenja vaš ERP/WMS sistem. Nastavite pisavo, velikost in poravnavo."
+  description: "Add fixed text or dynamic fields that can be replaced by your ERP or WMS system. Control font, size and alignment."
 }, {
   icon: BarChart3,
   title: "All common barcode types",
