@@ -1,96 +1,43 @@
-import { Printer, Mail, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Printer, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
-      <div className="container-wide py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
-          {/* Logo & description */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-                <Printer className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-xl">Label Designer PTI</span>
+      <div className="container-wide py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Logo & company */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
+              <Printer className="w-5 h-5 text-primary-foreground" />
             </div>
-            <p className="text-background/70 mb-6 max-w-sm">
-              Profesionalno oblikovanje etiket za Zebra tiskalnike. Enostavno, hitro, brez namestitve.
-            </p>
-            <div className="flex items-center gap-2 text-background/70">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:podpora@labeldesigner.si" className="hover:text-background transition-colors">
-                podpora@labeldesigner.si
-              </a>
-            </div>
+            <span className="font-bold text-xl">Label Designer PTI</span>
           </div>
           
-          {/* Product */}
-          <div>
-            <h4 className="font-semibold mb-4">Produkt</h4>
-            <ul className="space-y-3 text-background/70">
-              <li>
-                <a href="#funkcionalnosti" className="hover:text-background transition-colors">Funkcionalnosti</a>
-              </li>
-              <li>
-                <a href="#cenik" className="hover:text-background transition-colors">Cenik</a>
-              </li>
-              <li>
-                <a href="#tiskalniki" className="hover:text-background transition-colors">Podprti tiskalniki</a>
-              </li>
-            </ul>
+          {/* Contact */}
+          <div className="flex items-center gap-2 text-background/70">
+            <Mail className="w-4 h-4" />
+            <a href="mailto:info@labeldesigner.com" className="hover:text-background transition-colors">
+              info@labeldesigner.com
+            </a>
           </div>
           
-          {/* Support */}
-          <div>
-            <h4 className="font-semibold mb-4">Podpora</h4>
-            <ul className="space-y-3 text-background/70">
-              <li>
-                <a href="#faq" className="hover:text-background transition-colors">Pogosta vprašanja</a>
-              </li>
-              <li>
-                <a href="#kontakt" className="hover:text-background transition-colors">Kontakt</a>
-              </li>
-              <li>
-                <Link to="/dokumentacija" className="hover:text-background transition-colors">Dokumentacija</Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Podjetje</h4>
-            <ul className="space-y-3 text-background/70">
-              <li>
-                <a href="#o-nas" className="hover:text-background transition-colors">O nas</a>
-              </li>
-              <li>
-                <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">Pogoji uporabe</Link>
-              </li>
-              <li>
-                <Link to="/zasebnost" className="hover:text-background transition-colors">Politika zasebnosti</Link>
-              </li>
-            </ul>
+          {/* Legal links */}
+          <div className="flex items-center gap-6 text-background/70">
+            <Link to="/zasebnost" className="hover:text-background transition-colors">
+              Privacy policy
+            </Link>
+            <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">
+              Terms of service
+            </Link>
           </div>
         </div>
         
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-background/10 text-center">
           <p className="text-sm text-background/50">
-            © {new Date().getFullYear()} Label Designer PTI. Vse pravice pridržane.
+            © {new Date().getFullYear()} Label Designer PTI. All rights reserved.
           </p>
-          
-          <div className="flex items-center gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors">
-              <Facebook className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>

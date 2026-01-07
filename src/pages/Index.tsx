@@ -1,12 +1,11 @@
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import ProblemSection from "@/components/landing/ProblemSection";
+import SolutionSection from "@/components/landing/SolutionSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import FeaturesSection from "@/components/landing/FeaturesSection";
 import PrintersSection from "@/components/landing/PrintersSection";
+import PrintingOptionsSection from "@/components/landing/PrintingOptionsSection";
 import UseCasesSection from "@/components/landing/UseCasesSection";
-import PricingSection from "@/components/landing/PricingSection";
-import FAQSection from "@/components/landing/FAQSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
 
@@ -17,22 +16,15 @@ const Index = () => {
       <main>
         <HeroSection />
         <ProblemSection />
+        <SolutionSection />
         <div id="kako-deluje">
           <HowItWorksSection />
-        </div>
-        <div id="funkcionalnosti">
-          <FeaturesSection />
         </div>
         <div id="tiskalniki">
           <PrintersSection />
         </div>
+        <PrintingOptionsSection />
         <UseCasesSection />
-        <div id="cenik">
-          <PricingSection />
-        </div>
-        <div id="faq">
-          <FAQSection />
-        </div>
         <CTASection />
       </main>
       <Footer />
