@@ -1,7 +1,7 @@
 import { Type, BarChart3, QrCode, Image, Ruler, Cloud } from "lucide-react";
 const features = [{
   icon: Type,
-  title: "Besedilo in placeholderji",
+  title: "Text and placeholders",
   description: "Dodajte fiksno besedilo ali dinamična polja, ki jih zamenja vaš ERP/WMS sistem. Nastavite pisavo, velikost in poravnavo."
 }, {
   icon: BarChart3,
