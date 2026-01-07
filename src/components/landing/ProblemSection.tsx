@@ -6,7 +6,7 @@ const problems = [{
 }, {
   icon: Monitor,
   title: "Complex desktop installations",
-  description: "Licence, namestitve, posodobitve... Za vsako delovno postajo posebej."
+  description: "Installation often requires drivers, local setup and IT support, making deployment slow and difficult across multiple workstations."
 }, {
   icon: Plug,
   title: "Inconsistent print results",
