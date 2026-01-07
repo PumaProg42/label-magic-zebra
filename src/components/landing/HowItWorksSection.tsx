@@ -2,7 +2,7 @@ import { MousePointer2, FileText, Printer } from "lucide-react";
 const steps = [{
   icon: MousePointer2,
   step: "01",
-  title: "Oblikujte etiketo",
+  title: "Design the label",
   description: "Povlecite besedilo, črtne kode, QR kode in slike na delovno površino. Nastavite velikost etikete v milimetrih in prilagodite DPI vašega tiskalnika."
 }, {
   icon: FileText,
