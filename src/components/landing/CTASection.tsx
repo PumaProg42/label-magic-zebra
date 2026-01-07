@@ -23,7 +23,7 @@ const CTASection = () => {
                 Free trial. No credit card. No commitment.
               </p>
               <Button variant="hero" size="xl" asChild>
-                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.perko-tehtnice.si/">
                   Start for free
                   <ArrowRight className="w-5 h-5" />
                 </a>
