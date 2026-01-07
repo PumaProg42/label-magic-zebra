@@ -49,7 +49,7 @@ const Footer = () => {
                 <a href="#faq" className="hover:text-background transition-colors">FAQ</a>
               </li>
               <li>
-                <a href="#kontakt" className="hover:text-background transition-colors">Contact</a>
+                <Link to="/kontakt" className="hover:text-background transition-colors">Contact</Link>
               </li>
               <li>
                 <Link to="/dokumentacija" className="hover:text-background transition-colors">Documentation</Link>
