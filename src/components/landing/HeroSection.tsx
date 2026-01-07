@@ -43,7 +43,7 @@ const HeroSection = () => {
           
           {/* Right content - Editor preview image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-card">
               <img 
                 src={labelDesignerPreview} 
                 alt="Label Designer PTI - Professional label design interface" 
