@@ -17,7 +17,7 @@ const features = [{
   description: "Naložite PNG ali JPG slike. Avtomatično se pretvorijo v format, primeren za termični tisk."
 }, {
   icon: Ruler,
-  title: "Natančno pozicioniranje",
+  title: "Precise positioning",
   description: "Ravnila v milimetrih, pametne vodilne črte za poravnavo, koordinate v pikslih. Profesionalna natančnost."
 }, {
   icon: Cloud,
