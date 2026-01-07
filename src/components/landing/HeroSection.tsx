@@ -17,28 +17,26 @@ const HeroSection = () => {
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Design labels in your browser.{" "}
-                <span className="gradient-text">Print on any thermal printer.</span>
+                Profesionalne etikete za Zebra tiskalnike —{" "}
+                <span className="gradient-text">brez zapletene programske opreme</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                A professional web-based label designer for industrial use.
-                Create, export and print labels without vendor lock-in.
+                Oblikujte etikete vizualno, dodajte črtne kode in QR kode, nato natisnite direktno na vaš Zebra tiskalnik. Vse v brskalniku, brez namestitve.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
-                  Start free
+                  Preizkusite brezplačno 14 dni
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="xl" asChild>
-                <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
-                  View demo
-                </a>
-              </Button>
             </div>
+            
+            <p className="text-sm text-muted-foreground">
+              Brez kreditne kartice. Brez obveznosti.
+            </p>
           </div>
           
           {/* Right content - Editor preview */}
@@ -60,7 +58,7 @@ const HeroSection = () => {
                 <div className="bg-background rounded-2xl p-6 border-2 border-dashed border-border shadow-inner">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Location</span>
+                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Lokacija</span>
                       <span className="font-bold text-lg">A-01-02</span>
                     </div>
                     
@@ -88,8 +86,8 @@ const HeroSection = () => {
                         <QrCode className="w-12 h-12 text-background" />
                       </div>
                       <div className="text-right">
-                        <p className="font-semibold">Product XYZ</p>
-                        <p className="text-2xl font-bold gradient-text">€ 24.99</p>
+                        <p className="font-semibold">Izdelek XYZ</p>
+                        <p className="text-2xl font-bold gradient-text">€ 24,99</p>
                       </div>
                     </div>
                   </div>
