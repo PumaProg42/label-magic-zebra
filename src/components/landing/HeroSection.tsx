@@ -1,9 +1,7 @@
 import { ArrowRight, Printer, QrCode, Barcode } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
       
@@ -21,14 +19,15 @@ const HeroSection = () => {
                 <span className="gradient-text">Print on any thermal printer.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                Oblikujte etikete vizualno, dodajte črtne kode in QR kode, nato natisnite direktno na vaš Zebra tiskalnik. Vse v brskalniku, brez namestitve.
+                A professional web-based label designer for industrial use.
+Create, export and print labels without vendor lock-in.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
-                  Preizkusite brezplačno 14 dni
+                  ​Try 14 day FREE trail                  
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
@@ -64,16 +63,10 @@ const HeroSection = () => {
                     
                     <div className="flex justify-center py-4">
                       <div className="flex items-center gap-1">
-                        {[...Array(20)].map((_, i) => (
-                          <div 
-                            key={i} 
-                            className="bg-foreground" 
-                            style={{ 
-                              width: Math.random() > 0.5 ? '2px' : '3px',
-                              height: '40px'
-                            }} 
-                          />
-                        ))}
+                        {[...Array(20)].map((_, i) => <div key={i} className="bg-foreground" style={{
+                        width: Math.random() > 0.5 ? '2px' : '3px',
+                        height: '40px'
+                      }} />)}
                       </div>
                     </div>
                     
@@ -97,10 +90,14 @@ const HeroSection = () => {
                 <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground p-3 rounded-2xl shadow-lg animate-float">
                   <Barcode className="w-6 h-6" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground p-3 rounded-2xl shadow-lg animate-float" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground p-3 rounded-2xl shadow-lg animate-float" style={{
+                animationDelay: '1s'
+              }}>
                   <QrCode className="w-6 h-6" />
                 </div>
-                <div className="absolute top-1/2 -right-6 bg-card text-foreground p-3 rounded-2xl shadow-lg border border-border animate-float" style={{ animationDelay: '2s' }}>
+                <div className="absolute top-1/2 -right-6 bg-card text-foreground p-3 rounded-2xl shadow-lg border border-border animate-float" style={{
+                animationDelay: '2s'
+              }}>
                   <Printer className="w-6 h-6" />
                 </div>
               </div>
@@ -108,8 +105,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
