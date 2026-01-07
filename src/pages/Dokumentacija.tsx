@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Printer, BookOpen, Monitor, Tag, Type, Barcode, QrCode, Image, Square, Save, Printer as PrinterIcon, FileCode, CreditCard, Keyboard, AlertCircle, HelpCircle, Mail } from "lucide-react";
+import { ArrowLeft, Printer, BookOpen, Monitor, Tag, Type, Barcode, QrCode, Image, Square, Save, Printer as PrinterIcon, FileCode, CreditCard, Keyboard, AlertCircle, HelpCircle, Mail, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -11,30 +11,30 @@ import {
 
 const Dokumentacija = () => {
   const tocItems = [
-    { id: "uvod", label: "1. Uvod", icon: BookOpen },
-    { id: "zacetek", label: "2. Začetek uporabe", icon: Monitor },
-    { id: "vmesnik", label: "3. Pregled vmesnika", icon: Monitor },
-    { id: "nastavitve", label: "4. Nastavitve etikete", icon: Tag },
-    { id: "elementi", label: "5. Delo z elementi", icon: Square },
-    { id: "besedilo", label: "6. Besedilo", icon: Type },
-    { id: "crtne-kode", label: "7. Črtne kode", icon: Barcode },
-    { id: "qr-kode", label: "8. QR kode", icon: QrCode },
-    { id: "slike", label: "9. Slike in logotipi", icon: Image },
-    { id: "oblike", label: "10. Oblike in črte", icon: Square },
-    { id: "shranjevanje", label: "11. Shranjevanje", icon: Save },
-    { id: "tiskanje", label: "12. Tiskanje", icon: PrinterIcon },
-    { id: "izvoz-zpl", label: "13. Izvoz ZPL", icon: FileCode },
-    { id: "narocnina", label: "14. Naročnina", icon: CreditCard },
-    { id: "bliznjice", label: "15. Bližnjice", icon: Keyboard },
-    { id: "tezave", label: "16. Odpravljanje težav", icon: AlertCircle },
+    { id: "introduction", label: "1. Introduction", icon: BookOpen },
+    { id: "getting-started", label: "2. Getting Started", icon: Monitor },
+    { id: "interface", label: "3. Interface Overview", icon: Monitor },
+    { id: "label-settings", label: "4. Label Settings", icon: Tag },
+    { id: "working-with-elements", label: "5. Working with Elements", icon: Square },
+    { id: "text", label: "6. Text Elements", icon: Type },
+    { id: "barcodes", label: "7. Barcodes", icon: Barcode },
+    { id: "qr-codes", label: "8. QR Codes", icon: QrCode },
+    { id: "images", label: "9. Images & Logos", icon: Image },
+    { id: "shapes", label: "10. Shapes & Lines", icon: Square },
+    { id: "saving", label: "11. Saving & Loading", icon: Save },
+    { id: "printing", label: "12. Printing", icon: PrinterIcon },
+    { id: "zpl-export", label: "13. ZPL Export", icon: FileCode },
+    { id: "subscription", label: "14. Subscription", icon: CreditCard },
+    { id: "shortcuts", label: "15. Keyboard Shortcuts", icon: Keyboard },
+    { id: "troubleshooting", label: "16. Troubleshooting", icon: AlertCircle },
     { id: "faq", label: "17. FAQ", icon: HelpCircle },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Dokumentacija - Label Designer PTI</title>
-        <meta name="description" content="Uporabniški priročnik za Label Designer PTI. Naučite se oblikovati etikete za Zebra tiskalnike." />
+        <title>Documentation - Label Designer PTI</title>
+        <meta name="description" content="Complete user guide for Label Designer PTI. Learn how to design thermal labels for Zebra printers with our intuitive web-based editor." />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -45,7 +45,7 @@ const Dokumentacija = () => {
               <Link to="/">
                 <Button variant="ghost" size="sm">
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Nazaj
+                  Back
                 </Button>
               </Link>
               <div className="flex items-center gap-3">
@@ -55,7 +55,7 @@ const Dokumentacija = () => {
                 <span className="font-bold">Label Designer PTI</span>
               </div>
             </div>
-            <span className="text-sm text-muted-foreground hidden sm:block">Dokumentacija v1.0</span>
+            <span className="text-sm text-muted-foreground hidden sm:block">Documentation v1.0</span>
           </div>
         </header>
 
@@ -64,7 +64,7 @@ const Dokumentacija = () => {
             {/* Sidebar TOC */}
             <aside className="hidden lg:block">
               <div className="sticky top-24">
-                <h3 className="font-semibold mb-4 text-lg">Kazalo</h3>
+                <h3 className="font-semibold mb-4 text-lg">Contents</h3>
                 <nav className="space-y-1">
                   {tocItems.map((item) => (
                     <a
@@ -81,815 +81,1165 @@ const Dokumentacija = () => {
             </aside>
 
             {/* Main Content */}
-            <main className="prose prose-lg max-w-none dark:prose-invert">
+            <main className="max-w-none">
               {/* Title */}
-              <div className="not-prose mb-12">
-                <h1 className="text-4xl font-bold mb-4">Dokumentacija</h1>
+              <div className="mb-16">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">Documentation</h1>
                 <p className="text-xl text-muted-foreground">
-                  Uporabniški priročnik za Label Designer PTI
+                  Everything you need to design and print professional thermal labels
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Različica: 1.0 • Zadnja posodobitev: December 2024
+                <p className="text-sm text-muted-foreground mt-4">
+                  Version 1.0 • Last updated: January 2025
                 </p>
               </div>
 
-              {/* 1. UVOD */}
-              <section id="uvod" className="scroll-mt-24">
-                <h2>1. Uvod</h2>
-                
-                <h3>1.1 Kaj je Label Designer PTI?</h3>
-                <p>
-                  Label Designer PTI je spletna aplikacija za vizualno oblikovanje termičnih etiket za Zebra tiskalnike. Omogoča vam:
-                </p>
-                <ul>
-                  <li>Ustvarjanje etiket s preprostim vlečenjem elementov (drag-and-drop)</li>
-                  <li>Dodajanje besedila, črtnih kod, QR kod in slik</li>
-                  <li>Natančno pozicioniranje z ravnili v milimetrih</li>
-                  <li>Neposredno tiskanje na Zebra tiskalnike preko omrežja</li>
-                  <li>Izvoz v ZPL format za integracijo z vašim ERP/WMS sistemom</li>
-                  <li>Shranjevanje etiket v oblaku</li>
-                </ul>
-
-                <h3>1.2 Sistemske zahteve</h3>
-                <p><strong>Brskalnik (eden izmed):</strong></p>
-                <ul>
-                  <li>Google Chrome 90+ (priporočeno)</li>
-                  <li>Microsoft Edge 90+</li>
-                  <li>Mozilla Firefox 90+</li>
-                  <li>Safari 14+</li>
-                </ul>
-
-                <p><strong>Internetna povezava:</strong></p>
-                <ul>
-                  <li>Stabilna povezava za delo z aplikacijo</li>
-                  <li>Za tiskanje: tiskalnik mora biti v istem omrežju</li>
-                </ul>
-
-                <p><strong>Zebra tiskalnik (za tiskanje):</strong></p>
-                <ul>
-                  <li>Katerikoli Zebra termični tiskalnik z ZPL podporo</li>
-                  <li>Povezan v omrežje (ethernet ali WiFi)</li>
-                  <li>Znan IP naslov tiskalnika</li>
-                </ul>
-
-                <h3>1.3 Podprti tiskalniki</h3>
-                <p>Label Designer PTI deluje z vsemi Zebra tiskalniki, ki podpirajo ZPL jezik:</p>
-                
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Serija</th>
-                        <th className="px-4 py-3 text-left font-medium">Modeli</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3">ZD serija</td><td className="px-4 py-3">ZD420, ZD620, ZD421, ZD621</td></tr>
-                      <tr><td className="px-4 py-3">ZT serija</td><td className="px-4 py-3">ZT410, ZT420, ZT610, ZT620, ZT230, ZT231</td></tr>
-                      <tr><td className="px-4 py-3">GK/GX serija</td><td className="px-4 py-3">GK420d, GK420t, GX420d, GX420t, GX430t</td></tr>
-                      <tr><td className="px-4 py-3">ZQ serija</td><td className="px-4 py-3">ZQ510, ZQ520, ZQ610, ZQ620 (mobilni)</td></tr>
-                      <tr><td className="px-4 py-3">Druge</td><td className="px-4 py-3">Vsi tiskalniki z ZPL podporo</td></tr>
-                    </tbody>
-                  </table>
+              {/* 1. INTRODUCTION */}
+              <section id="introduction" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">1. Introduction</h2>
                 </div>
-                <p><strong>Podprte resolucije:</strong> 203 DPI, 300 DPI, 600 DPI</p>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3">What is Label Designer PTI?</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Label Designer PTI is a web-based application for creating thermal labels for Zebra printers. 
+                      No installation required — design labels directly in your browser with pixel-perfect precision.
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {[
+                        "Drag-and-drop label design",
+                        "Text, barcodes, QR codes & images",
+                        "Precise millimeter positioning",
+                        "Direct network printing to Zebra printers",
+                        "ZPL export for ERP/WMS integration",
+                        "Cloud-based label storage"
+                      ].map((feature, i) => (
+                        <div key={i} className="flex items-center gap-2 text-sm">
+                          <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3">System Requirements</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="bg-muted/50 rounded-xl p-5">
+                        <h4 className="font-medium mb-2">Browser</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>Chrome 90+ (recommended)</li>
+                          <li>Edge 90+</li>
+                          <li>Firefox 90+</li>
+                          <li>Safari 14+</li>
+                        </ul>
+                      </div>
+                      <div className="bg-muted/50 rounded-xl p-5">
+                        <h4 className="font-medium mb-2">Internet</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>Stable internet connection</li>
+                          <li>Printer on same network for printing</li>
+                        </ul>
+                      </div>
+                      <div className="bg-muted/50 rounded-xl p-5">
+                        <h4 className="font-medium mb-2">Printer</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>Any Zebra ZPL printer</li>
+                          <li>Network connected</li>
+                          <li>Known IP address</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-3">Supported Printers</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Works with all Zebra printers supporting ZPL language:
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border rounded-lg">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-medium">Series</th>
+                            <th className="px-4 py-3 text-left font-medium">Models</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr><td className="px-4 py-3 font-medium">ZD Series</td><td className="px-4 py-3 text-muted-foreground">ZD420, ZD620, ZD421, ZD621</td></tr>
+                          <tr><td className="px-4 py-3 font-medium">ZT Series</td><td className="px-4 py-3 text-muted-foreground">ZT410, ZT420, ZT610, ZT620, ZT230, ZT231</td></tr>
+                          <tr><td className="px-4 py-3 font-medium">GK/GX Series</td><td className="px-4 py-3 text-muted-foreground">GK420d, GK420t, GX420d, GX420t, GX430t</td></tr>
+                          <tr><td className="px-4 py-3 font-medium">ZQ Series</td><td className="px-4 py-3 text-muted-foreground">ZQ510, ZQ520, ZQ610, ZQ620 (mobile)</td></tr>
+                          <tr><td className="px-4 py-3 font-medium">Others</td><td className="px-4 py-3 text-muted-foreground">All printers with ZPL support</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-3">
+                      <strong>Supported resolutions:</strong> 203 DPI, 300 DPI, 600 DPI
+                    </p>
+                  </div>
+                </div>
               </section>
 
-              {/* 2. ZAČETEK UPORABE */}
-              <section id="zacetek" className="scroll-mt-24">
-                <h2>2. Začetek uporabe</h2>
+              {/* 2. GETTING STARTED */}
+              <section id="getting-started" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Monitor className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">2. Getting Started</h2>
+                </div>
 
-                <h3>2.1 Registracija</h3>
-                <ol>
-                  <li>Obiščite spletno stran Label Designer PTI</li>
-                  <li>Kliknite <strong>"Registracija"</strong> ali <strong>"Preizkusite brezplačno"</strong></li>
-                  <li>Vnesite vaš e-poštni naslov</li>
-                  <li>Ustvarite geslo (najmanj 6 znakov)</li>
-                  <li>Kliknite <strong>"Registracija"</strong></li>
-                  <li>Preverite e-pošto in kliknite potrditveno povezavo</li>
-                  <li>Prijavite se z vašimi podatki</li>
-                </ol>
-                <p><strong>Brezplačni preizkus:</strong> Ob registraciji prejmete 14-dnevni brezplačni preizkus z vsemi funkcionalnostmi.</p>
+                <div className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="text-lg font-semibold mb-4">Create an Account</h3>
+                      <ol className="space-y-3 text-sm">
+                        <li className="flex gap-3">
+                          <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium flex-shrink-0">1</span>
+                          <span>Visit Label Designer PTI website</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium flex-shrink-0">2</span>
+                          <span>Click <strong>"Sign Up"</strong> or <strong>"Start Free Trial"</strong></span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium flex-shrink-0">3</span>
+                          <span>Enter your email address and create a password</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium flex-shrink-0">4</span>
+                          <span>Check your email and click the verification link</span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-medium flex-shrink-0">5</span>
+                          <span>Log in with your credentials</span>
+                        </li>
+                      </ol>
+                      <p className="text-sm text-muted-foreground mt-4 p-3 bg-primary/5 rounded-lg">
+                        <strong>Free trial:</strong> 14 days with full access, no credit card required.
+                      </p>
+                    </div>
 
-                <h3>2.2 Prijava</h3>
-                <ol>
-                  <li>Obiščite spletno stran Label Designer PTI</li>
-                  <li>Vnesite vaš e-poštni naslov in geslo</li>
-                  <li>Kliknite <strong>"Prijava"</strong></li>
-                </ol>
+                    <div className="space-y-6">
+                      <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                        <h3 className="text-lg font-semibold mb-4">Sign In</h3>
+                        <ol className="space-y-2 text-sm text-muted-foreground">
+                          <li>1. Go to Label Designer PTI</li>
+                          <li>2. Enter your email and password</li>
+                          <li>3. Click <strong>"Sign In"</strong></li>
+                        </ol>
+                      </div>
 
-                <h3>2.3 Pozabljeno geslo</h3>
-                <ol>
-                  <li>Na prijavni strani kliknite <strong>"Pozabljeno geslo?"</strong></li>
-                  <li>Vnesite vaš e-poštni naslov</li>
-                  <li>Kliknite <strong>"Pošlji email"</strong></li>
-                  <li>Preverite e-pošto in kliknite povezavo za ponastavitev</li>
-                  <li>Vnesite novo geslo</li>
-                </ol>
+                      <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                        <h3 className="text-lg font-semibold mb-4">Forgot Password?</h3>
+                        <ol className="space-y-2 text-sm text-muted-foreground">
+                          <li>1. Click <strong>"Forgot password?"</strong> on sign in page</li>
+                          <li>2. Enter your email address</li>
+                          <li>3. Check your email for reset link</li>
+                          <li>4. Create a new password</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
 
-              {/* 3. PREGLED VMESNIKA */}
-              <section id="vmesnik" className="scroll-mt-24">
-                <h2>3. Pregled vmesnika</h2>
+              {/* 3. INTERFACE OVERVIEW */}
+              <section id="interface" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Monitor className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">3. Interface Overview</h2>
+                </div>
 
-                <h3>3.1 Struktura zaslona</h3>
-                <div className="not-prose bg-muted/50 rounded-xl p-6 font-mono text-xs overflow-x-auto">
-                  <pre>{`┌─────────────────────────────────────────────────────────────────┐
-│                     NASLOVNA VRSTICA                            │
-│  [Ime etikete] [Širina] [Višina] [DPI] [Rotacija] [Shrani] [Print]
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Screen Layout</h3>
+                    <div className="bg-muted/50 rounded-xl p-6 font-mono text-xs overflow-x-auto">
+                      <pre>{`┌─────────────────────────────────────────────────────────────────┐
+│                        HEADER BAR                               │
+│  [Label Name] [Width] [Height] [DPI] [Rotation] [Save] [Print]  │
 ├────────────┬────────────────────────────────────┬───────────────┤
 │            │                                    │               │
-│   ORODNA   │                                    │   LASTNOSTI   │
-│   VRSTICA  │         DELOVNA POVRŠINA           │     PANEL     │
-│            │                                    │               │
-│  • Text    │    ┌────────────────────┐          │  Pozicija     │
-│  • Image   │    │                    │          │  Velikost     │
-│  • Barcode │    │      ETIKETA       │          │  Rotacija     │
-│  • Rect    │    │                    │          │  Pisava       │
-│  • Ellipse │    │                    │          │  Poravnava    │
-│  • Line    │    └────────────────────┘          │               │
-│            │         ↑                          │               │
-│  • Clear   │      Ravnila (mm)                  │               │
+│  TOOLBAR   │                                    │  PROPERTIES   │
+│            │         CANVAS AREA                │    PANEL      │
+│  • Text    │                                    │               │
+│  • Image   │    ┌────────────────────┐          │  Position     │
+│  • Barcode │    │                    │          │  Size         │
+│  • Shapes  │    │      LABEL         │          │  Rotation     │
+│  • Line    │    │                    │          │  Font         │
+│            │    └────────────────────┘          │  Alignment    │
+│  • Export  │         ↑                          │               │
+│  • Clear   │      Rulers (mm)                   │               │
 │  • Zoom    │                                    │               │
-│            │                                    │               │
 └────────────┴────────────────────────────────────┴───────────────┘`}</pre>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Header Bar</h3>
+                      <div className="space-y-3">
+                        {[
+                          { name: "Label Name", desc: "Name for saving your label" },
+                          { name: "Width (mm)", desc: "Label width in millimeters" },
+                          { name: "Height (mm)", desc: "Label height in millimeters" },
+                          { name: "DPI", desc: "Printer resolution (203, 300, 600)" },
+                          { name: "Rotate 180°", desc: "Flip label for printing" },
+                          { name: "Save", desc: "Save label to cloud" },
+                          { name: "Print", desc: "Open print options" },
+                        ].map((item, i) => (
+                          <div key={i} className="flex gap-3 text-sm">
+                            <span className="font-medium min-w-[100px]">{item.name}</span>
+                            <span className="text-muted-foreground">{item.desc}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Toolbar</h3>
+                      <div className="space-y-3">
+                        {[
+                          { name: "Text", desc: "Add text (fixed, placeholder, multiline)" },
+                          { name: "Image", desc: "Upload image or logo" },
+                          { name: "Barcode", desc: "Add barcode or QR code" },
+                          { name: "Rectangle", desc: "Add rectangle shape" },
+                          { name: "Ellipse", desc: "Add ellipse or circle" },
+                          { name: "Line", desc: "Add horizontal or vertical line" },
+                          { name: "Export ZPL", desc: "Export ZPL code" },
+                          { name: "Clear", desc: "Remove all elements" },
+                          { name: "Zoom", desc: "Zoom in/out (10% - 300%)" },
+                        ].map((item, i) => (
+                          <div key={i} className="flex gap-3 text-sm">
+                            <span className="font-medium min-w-[80px]">{item.name}</span>
+                            <span className="text-muted-foreground">{item.desc}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Canvas Area</h3>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {[
+                        { color: "bg-white border", label: "White area", desc: "Your label" },
+                        { color: "bg-muted", label: "Gray area", desc: "Outside label bounds" },
+                        { color: "bg-primary/20", label: "Blue guides", desc: "Alignment helpers" },
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm">
+                          <div className={`w-8 h-8 rounded ${item.color}`}></div>
+                          <div>
+                            <span className="font-medium">{item.label}</span>
+                            <span className="text-muted-foreground"> — {item.desc}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Properties Panel</h3>
+                    <p className="text-muted-foreground mb-3">When you select an element, its properties appear:</p>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                      {[
+                        "X, Y — Position in pixels",
+                        "Width, Height — Element dimensions",
+                        "Rotation — 0°, 90°, 180°, 270°",
+                        "Font size — Character size",
+                        "Alignment — Left, center, right",
+                        "Line weight — For shapes and lines",
+                      ].map((item, i) => (
+                        <div key={i} className="bg-muted/50 rounded-lg px-3 py-2">{item}</div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-
-                <h3>3.2 Naslovna vrstica</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Element</th>
-                        <th className="px-4 py-3 text-left font-medium">Opis</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">Ime etikete</td><td className="px-4 py-3">Vnesite ime za shranjevanje etikete</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Širina (mm)</td><td className="px-4 py-3">Širina etikete v milimetrih</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Višina (mm)</td><td className="px-4 py-3">Višina etikete v milimetrih</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">DPI</td><td className="px-4 py-3">Resolucija tiskalnika (203, 300, 600)</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Rotacija 180°</td><td className="px-4 py-3">Obrne etiketo za tiskanje</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Shrani</td><td className="px-4 py-3">Shrani etiketo v oblak</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">PRINT</td><td className="px-4 py-3">Odpre možnosti tiskanja</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <h3>3.3 Orodna vrstica (levo)</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Orodje</th>
-                        <th className="px-4 py-3 text-left font-medium">Opis</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">Text</td><td className="px-4 py-3">Dodaj besedilo (fiksno, placeholder, večvrstično)</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Image</td><td className="px-4 py-3">Naloži sliko ali logotip</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Barcode</td><td className="px-4 py-3">Dodaj črtno kodo ali QR kodo</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Rectangle</td><td className="px-4 py-3">Dodaj pravokotnik</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Ellipse</td><td className="px-4 py-3">Dodaj elipso/krog</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Line</td><td className="px-4 py-3">Dodaj vodoravno ali navpično črto</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Export ZPL</td><td className="px-4 py-3">Izvozi ZPL kodo</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Clear Label</td><td className="px-4 py-3">Pobriši vse elemente</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Zoom</td><td className="px-4 py-3">Povečava/pomanjšava (10% - 300%)</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <h3>3.4 Delovna površina (sredina)</h3>
-                <ul>
-                  <li><strong>Belo območje</strong> = vaša etiketa</li>
-                  <li><strong>Sivo območje</strong> = prostor izven etikete</li>
-                  <li><strong>Ravnila</strong> = milimetrska skala na vrhu in levi strani</li>
-                  <li><strong>Modre vodilne črte</strong> = pomagajo pri poravnavi elementov</li>
-                </ul>
-
-                <h3>3.5 Panel lastnosti (desno)</h3>
-                <p>Ko izberete element, se prikažejo njegove lastnosti:</p>
-                <ul>
-                  <li><strong>X, Y</strong> - Pozicija elementa v pikslih</li>
-                  <li><strong>Širina, Višina</strong> - Dimenzije elementa</li>
-                  <li><strong>Rotacija</strong> - Kot zasuka (0°, 90°, 180°, 270°)</li>
-                  <li><strong>Pisava</strong> - Velikost, širina, višina znakov</li>
-                  <li><strong>Poravnava</strong> - Levo, sredina, desno</li>
-                  <li><strong>Debelina črte</strong> - Za oblike in črte</li>
-                </ul>
               </section>
 
-              {/* 4. NASTAVITVE ETIKETE */}
-              <section id="nastavitve" className="scroll-mt-24">
-                <h2>4. Nastavitve etikete</h2>
-
-                <h3>4.1 Dimenzije etikete</h3>
-                <p><strong>Širina in višina</strong> sta podani v milimetrih (mm).</p>
-                <ol>
-                  <li>V naslovni vrstici vnesite želeno širino v polje <strong>"Width (mm)"</strong></li>
-                  <li>Vnesite želeno višino v polje <strong>"Height (mm)"</strong></li>
-                  <li>Delovna površina se samodejno prilagodi</li>
-                </ol>
-
-                <p><strong>Primeri pogostih velikosti:</strong></p>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Uporaba</th>
-                        <th className="px-4 py-3 text-left font-medium">Širina</th>
-                        <th className="px-4 py-3 text-left font-medium">Višina</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3">Majhna cenovna etiketa</td><td className="px-4 py-3">40 mm</td><td className="px-4 py-3">20 mm</td></tr>
-                      <tr><td className="px-4 py-3">Standardna etiketa</td><td className="px-4 py-3">100 mm</td><td className="px-4 py-3">50 mm</td></tr>
-                      <tr><td className="px-4 py-3">Transportna etiketa</td><td className="px-4 py-3">100 mm</td><td className="px-4 py-3">150 mm</td></tr>
-                      <tr><td className="px-4 py-3">Polična etiketa</td><td className="px-4 py-3">70 mm</td><td className="px-4 py-3">40 mm</td></tr>
-                    </tbody>
-                  </table>
+              {/* 4. LABEL SETTINGS */}
+              <section id="label-settings" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Tag className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">4. Label Settings</h2>
                 </div>
 
-                <h3>4.2 DPI (Dots Per Inch)</h3>
-                <p>DPI določa resolucijo vašega tiskalnika. <strong>Nastavitev mora ustrezati vašemu tiskalniku!</strong></p>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">DPI</th>
-                        <th className="px-4 py-3 text-left font-medium">Opis</th>
-                        <th className="px-4 py-3 text-left font-medium">Uporaba</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">203 DPI</td><td className="px-4 py-3">Standardna resolucija</td><td className="px-4 py-3">Večina namiznih tiskalnikov</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">300 DPI</td><td className="px-4 py-3">Visoka resolucija</td><td className="px-4 py-3">Podrobnejše etikete, manjše črtne kode</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">600 DPI</td><td className="px-4 py-3">Ultra visoka resolucija</td><td className="px-4 py-3">Zelo majhne etikete, precizni tisk</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Label Dimensions</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Set your label size in the header bar. The canvas automatically adjusts to your dimensions.
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border rounded-lg">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-medium">Use Case</th>
+                            <th className="px-4 py-3 text-left font-medium">Width</th>
+                            <th className="px-4 py-3 text-left font-medium">Height</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr><td className="px-4 py-3">Small price tag</td><td className="px-4 py-3 text-muted-foreground">40 mm</td><td className="px-4 py-3 text-muted-foreground">20 mm</td></tr>
+                          <tr><td className="px-4 py-3">Standard label</td><td className="px-4 py-3 text-muted-foreground">100 mm</td><td className="px-4 py-3 text-muted-foreground">50 mm</td></tr>
+                          <tr><td className="px-4 py-3">Shipping label</td><td className="px-4 py-3 text-muted-foreground">100 mm</td><td className="px-4 py-3 text-muted-foreground">150 mm</td></tr>
+                          <tr><td className="px-4 py-3">Shelf label</td><td className="px-4 py-3 text-muted-foreground">70 mm</td><td className="px-4 py-3 text-muted-foreground">40 mm</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
 
-                <h3>4.3 Rotacija 180°</h3>
-                <p>Označite <strong>"Rotate 180°"</strong> če:</p>
-                <ul>
-                  <li>Etikete izstopajo v napačni smeri</li>
-                  <li>Želite obrnjen tisk</li>
-                  <li>Tiskalnik montiran "na glavo"</li>
-                </ul>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">DPI (Dots Per Inch)</h3>
+                    <p className="text-muted-foreground mb-4">
+                      DPI determines your printer's resolution. <strong>This setting must match your printer!</strong>
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {[
+                        { dpi: "203 DPI", desc: "Standard resolution", use: "Most desktop printers" },
+                        { dpi: "300 DPI", desc: "High resolution", use: "Detailed labels, small barcodes" },
+                        { dpi: "600 DPI", desc: "Ultra-high resolution", use: "Very small labels, precision printing" },
+                      ].map((item, i) => (
+                        <div key={i} className="bg-muted/50 rounded-xl p-5">
+                          <h4 className="font-semibold mb-1">{item.dpi}</h4>
+                          <p className="text-sm text-muted-foreground mb-2">{item.desc}</p>
+                          <p className="text-xs text-muted-foreground">{item.use}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">180° Rotation</h3>
+                    <p className="text-muted-foreground mb-3">Enable <strong>"Rotate 180°"</strong> when:</p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-primary" />
+                        Labels exit in the wrong orientation
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-primary" />
+                        You need reversed printing
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-primary" />
+                        Printer is mounted upside-down
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </section>
 
-              {/* 5. DELO Z ELEMENTI */}
-              <section id="elementi" className="scroll-mt-24">
-                <h2>5. Delo z elementi</h2>
-
-                <h3>5.1 Dodajanje elementov</h3>
-                <p><strong>Možnost 1: Klik na orodje</strong></p>
-                <ol>
-                  <li>Kliknite orodje v orodni vrstici (npr. Text)</li>
-                  <li>Element se doda na sredino etikete</li>
-                  <li>Povlecite element na želeno pozicijo</li>
-                </ol>
-
-                <h3>5.2 Izbira elementa</h3>
-                <ul>
-                  <li><strong>En klik</strong> na element ga izbere</li>
-                  <li>Izbran element ima <strong>modre kontrolne točke</strong></li>
-                  <li>V panelu desno se prikažejo lastnosti</li>
-                </ul>
-
-                <h3>5.3 Premikanje elementov</h3>
-                <p><strong>Z miško:</strong> Kliknite in povlecite element na novo pozicijo</p>
-                <p><strong>Z tipkovnico:</strong></p>
-                <ul>
-                  <li>Puščice premikajo izbrani element za 1 piksel</li>
-                  <li>Shift + puščice premikajo za 10 pikslov</li>
-                </ul>
-                <p><strong>Natančno pozicioniranje:</strong> V panelu lastnosti vnesite točne X in Y koordinate</p>
-
-                <h3>5.4 Spreminjanje velikosti</h3>
-                <ol>
-                  <li>Izberite element</li>
-                  <li>Povlecite <strong>modro kontrolno točko</strong> na robu ali vogalu</li>
-                  <li>Vogalne točke ohranjajo razmerje (pri nekaterih elementih)</li>
-                  <li>Robne točke spreminjajo samo eno dimenzijo</li>
-                </ol>
-
-                <h3>5.5 Rotacija elementov</h3>
-                <ol>
-                  <li>Izberite element</li>
-                  <li>V panelu lastnosti izberite <strong>Rotacija</strong>: 0°, 90°, 180° ali 270°</li>
-                </ol>
-                <p><strong>Opomba:</strong> Rotacija je omejena na te štiri kote zaradi omejitev ZPL jezika.</p>
-
-                <h3>5.6 Kopiranje in lepljenje</h3>
-                <p><strong>Kopiranje:</strong> Izberite element → Ctrl+C (Windows) / Cmd+C (Mac)</p>
-                <p><strong>Lepljenje:</strong> Ctrl+V (Windows) / Cmd+V (Mac)</p>
-
-                <h3>5.7 Brisanje elementa</h3>
-                <p>Izberite element → pritisnite <strong>Delete</strong> ali <strong>Backspace</strong></p>
-              </section>
-
-              {/* 6. BESEDILO */}
-              <section id="besedilo" className="scroll-mt-24">
-                <h2>6. Besedilo</h2>
-
-                <h3>6.1 Vrste besedila</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Vrsta</th>
-                        <th className="px-4 py-3 text-left font-medium">Uporaba</th>
-                        <th className="px-4 py-3 text-left font-medium">Primer</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">Fiksno besedilo</td><td className="px-4 py-3">Statično besedilo, enako na vseh etiketah</td><td className="px-4 py-3">"MADE IN EU", "LOT:"</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Placeholder</td><td className="px-4 py-3">Dinamično polje, ki ga zamenja ERP sistem</td><td className="px-4 py-3">{`{{NAZIV}}, {{CENA}}`}</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Večvrstično</td><td className="px-4 py-3">Daljše besedilo z avtomatičnim prelamljanjem</td><td className="px-4 py-3">Opisi, naslovi</td></tr>
-                    </tbody>
-                  </table>
+              {/* 5. WORKING WITH ELEMENTS */}
+              <section id="working-with-elements" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Square className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">5. Working with Elements</h2>
                 </div>
 
-                <h3>6.2 Dodajanje besedila</h3>
-                <ol>
-                  <li>Kliknite <strong>"Text"</strong> v orodni vrstici</li>
-                  <li>Izberite kategorijo: Fixed Text, Text Field (Placeholder), ali Multiline Text</li>
-                  <li>Za placeholder izberite ime polja (npr. "NAZIV_IZDELKA")</li>
-                  <li>Besedilo se doda na etiketo</li>
-                </ol>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Adding Elements</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Click a tool in the toolbar (e.g., Text)</li>
+                      <li>2. Element appears at center of label</li>
+                      <li>3. Drag to desired position</li>
+                    </ol>
+                  </div>
 
-                <h3>6.3 Nastavitve pisave</h3>
-                <ul>
-                  <li><strong>Font Size</strong> - Velikost pisave v pikslih</li>
-                  <li><strong>Font Width</strong> - Širina znakov (neodvisno od višine)</li>
-                  <li><strong>Font Height</strong> - Višina znakov (neodvisno od širine)</li>
-                </ul>
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Selecting Elements</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Click an element to select it</li>
+                      <li>• Selected elements show blue control points</li>
+                      <li>• Properties panel shows element settings</li>
+                    </ul>
+                  </div>
 
-                <h3>6.4 Placeholderji za ERP integracijo</h3>
-                <p>Placeholderji omogočajo dinamično zamenjavo podatkov. Vaš ERP/WMS sistem nato zamenja {`{{...}}`} z dejanskimi vrednostmi.</p>
-                <div className="not-prose bg-muted rounded-lg p-4 font-mono text-sm">
-                  <pre>{`{{NAZIV_IZDELKA}}
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Moving Elements</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li><strong>Mouse:</strong> Click and drag</li>
+                      <li><strong>Arrow keys:</strong> Move 1 pixel</li>
+                      <li><strong>Shift + arrows:</strong> Move 10 pixels</li>
+                      <li><strong>Precise:</strong> Enter X, Y in properties panel</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Resizing Elements</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Select the element</li>
+                      <li>2. Drag a blue control point</li>
+                      <li>3. Corner points maintain aspect ratio</li>
+                      <li>4. Edge points resize one dimension</li>
+                    </ol>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Rotating Elements</h3>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Select element, then choose rotation in properties panel: 0°, 90°, 180°, or 270°.
+                    </p>
+                    <p className="text-xs text-muted-foreground italic">
+                      Note: Rotation is limited to these angles due to ZPL language constraints.
+                    </p>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Copy, Paste & Delete</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li><strong>Copy:</strong> Ctrl+C (Win) / Cmd+C (Mac)</li>
+                      <li><strong>Paste:</strong> Ctrl+V (Win) / Cmd+V (Mac)</li>
+                      <li><strong>Delete:</strong> Delete or Backspace key</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* 6. TEXT */}
+              <section id="text" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Type className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">6. Text Elements</h2>
+                </div>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Text Types</h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border rounded-lg">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-medium">Type</th>
+                            <th className="px-4 py-3 text-left font-medium">Use Case</th>
+                            <th className="px-4 py-3 text-left font-medium">Example</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr>
+                            <td className="px-4 py-3 font-medium">Fixed Text</td>
+                            <td className="px-4 py-3 text-muted-foreground">Static text, same on all labels</td>
+                            <td className="px-4 py-3 text-muted-foreground">"MADE IN EU", "LOT:"</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">Placeholder</td>
+                            <td className="px-4 py-3 text-muted-foreground">Dynamic field replaced by ERP</td>
+                            <td className="px-4 py-3 font-mono text-muted-foreground">{`{{PRODUCT_NAME}}`}</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">Multiline</td>
+                            <td className="px-4 py-3 text-muted-foreground">Longer text with auto-wrapping</td>
+                            <td className="px-4 py-3 text-muted-foreground">Descriptions, addresses</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Adding Text</h3>
+                      <ol className="space-y-2 text-sm text-muted-foreground">
+                        <li>1. Click <strong>"Text"</strong> in toolbar</li>
+                        <li>2. Choose: Fixed, Placeholder, or Multiline</li>
+                        <li>3. For placeholders, select field name</li>
+                        <li>4. Position on label</li>
+                      </ol>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Font Settings</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li><strong>Font Size</strong> — Character size in pixels</li>
+                        <li><strong>Font Width</strong> — Character width (independent)</li>
+                        <li><strong>Font Height</strong> — Character height (independent)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Placeholders for ERP Integration</h3>
+                    <p className="text-muted-foreground mb-3">
+                      Placeholders allow dynamic data replacement. Your ERP/WMS system replaces {`{{...}}`} with actual values.
+                    </p>
+                    <div className="bg-muted rounded-lg p-4 font-mono text-sm">
+                      <pre>{`{{PRODUCT_NAME}}
 SKU: {{SKU}}
-Cena: {{CENA}} €`}</pre>
+Price: {{PRICE}} €`}</pre>
+                    </div>
+                  </div>
                 </div>
               </section>
 
-              {/* 7. ČRTNE KODE */}
-              <section id="crtne-kode" className="scroll-mt-24">
-                <h2>7. Črtne kode</h2>
-
-                <h3>7.1 Podprte vrste črtnih kod</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Vrsta</th>
-                        <th className="px-4 py-3 text-left font-medium">Dolžina podatkov</th>
-                        <th className="px-4 py-3 text-left font-medium">Uporaba</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">EAN-8</td><td className="px-4 py-3">7-8 številk</td><td className="px-4 py-3">Majhni izdelki, interna uporaba</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">EAN-13</td><td className="px-4 py-3">12-13 številk</td><td className="px-4 py-3">Maloprodajni izdelki, standard</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Code 128</td><td className="px-4 py-3">Poljubna (alfanumerično)</td><td className="px-4 py-3">Logistika, interna uporaba</td></tr>
-                    </tbody>
-                  </table>
+              {/* 7. BARCODES */}
+              <section id="barcodes" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Barcode className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">7. Barcodes</h2>
                 </div>
 
-                <h3>7.2 Dodajanje črtne kode</h3>
-                <ol>
-                  <li>Kliknite <strong>"Barcode"</strong> v orodni vrstici</li>
-                  <li>Izberite vrsto: EAN-8, EAN-13 ali Code 128</li>
-                  <li>Vnesite podatke</li>
-                  <li>Nastavite velikost (Size) in višino (Height)</li>
-                  <li>Kliknite <strong>"Dodaj"</strong></li>
-                </ol>
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Supported Barcode Types</h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border rounded-lg">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-medium">Type</th>
+                            <th className="px-4 py-3 text-left font-medium">Data Length</th>
+                            <th className="px-4 py-3 text-left font-medium">Use Case</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr>
+                            <td className="px-4 py-3 font-medium">EAN-8</td>
+                            <td className="px-4 py-3 text-muted-foreground">7-8 digits</td>
+                            <td className="px-4 py-3 text-muted-foreground">Small products, internal use</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">EAN-13</td>
+                            <td className="px-4 py-3 text-muted-foreground">12-13 digits</td>
+                            <td className="px-4 py-3 text-muted-foreground">Retail products (standard)</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">Code 128</td>
+                            <td className="px-4 py-3 text-muted-foreground">Variable (alphanumeric)</td>
+                            <td className="px-4 py-3 text-muted-foreground">Logistics, internal use</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
 
-                <h3>7.3 Nastavitve črtne kode</h3>
-                <ul>
-                  <li><strong>Size</strong> - Širina modula (črte): 1-10</li>
-                  <li><strong>Height</strong> - Višina črt v pikslih: 10-500</li>
-                  <li><strong>Human Readable</strong> - Prikaži številke pod kodo: Da/Ne</li>
-                </ul>
-              </section>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Adding a Barcode</h3>
+                      <ol className="space-y-2 text-sm text-muted-foreground">
+                        <li>1. Click <strong>"Barcode"</strong> in toolbar</li>
+                        <li>2. Select type: EAN-8, EAN-13, or Code 128</li>
+                        <li>3. Enter data</li>
+                        <li>4. Set size and height</li>
+                        <li>5. Click <strong>"Add"</strong></li>
+                      </ol>
+                    </div>
 
-              {/* 8. QR KODE */}
-              <section id="qr-kode" className="scroll-mt-24">
-                <h2>8. QR kode</h2>
-
-                <h3>8.1 O QR kodah</h3>
-                <p>QR (Quick Response) kode lahko shranijo:</p>
-                <ul>
-                  <li>Spletne naslove (URL)</li>
-                  <li>Besedilo</li>
-                  <li>Kontaktne podatke</li>
-                  <li>Lokacije</li>
-                  <li>Poljubne podatke</li>
-                </ul>
-
-                <h3>8.2 Dodajanje QR kode</h3>
-                <ol>
-                  <li>Kliknite <strong>"Barcode"</strong> v orodni vrstici</li>
-                  <li>Izberite <strong>"QR Code"</strong></li>
-                  <li>Vnesite podatke (npr. URL ali besedilo)</li>
-                  <li>Nastavite Magnification (Size): 1-10</li>
-                  <li>Nastavite Error Correction: L, M, Q, H</li>
-                  <li>Kliknite <strong>"Dodaj"</strong></li>
-                </ol>
-
-                <h3>8.3 Error Correction (popravek napak)</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Stopnja</th>
-                        <th className="px-4 py-3 text-left font-medium">Popravek</th>
-                        <th className="px-4 py-3 text-left font-medium">Uporaba</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">L (Low)</td><td className="px-4 py-3">~7%</td><td className="px-4 py-3">Čista okolja, majhne kode</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">M (Medium)</td><td className="px-4 py-3">~15%</td><td className="px-4 py-3">Standardna uporaba</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Q (Quartile)</td><td className="px-4 py-3">~25%</td><td className="px-4 py-3">Industrijsko okolje</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">H (High)</td><td className="px-4 py-3">~30%</td><td className="px-4 py-3">Poškodovane/umazane etikete</td></tr>
-                    </tbody>
-                  </table>
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Barcode Settings</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li><strong>Size</strong> — Module width (bar width): 1-10</li>
+                        <li><strong>Height</strong> — Bar height in pixels: 10-500</li>
+                        <li><strong>Human Readable</strong> — Show numbers below: Yes/No</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <p>Višja stopnja = večja QR koda, a bolj odporna na poškodbe.</p>
               </section>
 
-              {/* 9. SLIKE */}
-              <section id="slike" className="scroll-mt-24">
-                <h2>9. Slike in logotipi</h2>
-
-                <h3>9.1 Podprte oblike datotek</h3>
-                <ul>
-                  <li><strong>PNG</strong> - Priporočeno, podpira prosojnost</li>
-                  <li><strong>JPG/JPEG</strong> - Dobra kompresija</li>
-                  <li><strong>GIF</strong> - Brez animacije</li>
-                  <li><strong>BMP</strong> - Velike datoteke</li>
-                  <li><strong>SVG</strong> - Ni podprt, pretvorite v PNG</li>
-                </ul>
-
-                <h3>9.2 Dodajanje slike</h3>
-                <ol>
-                  <li>Kliknite <strong>"Image"</strong> v orodni vrstici</li>
-                  <li>Kliknite <strong>"Izberi datoteko"</strong> ali povlecite sliko</li>
-                  <li>Slika se doda na etiketo</li>
-                  <li>Prilagodite velikost in pozicijo</li>
-                </ol>
-
-                <h3>9.3 Nasveti za slike</h3>
-                <p><strong>Za najboljše rezultate:</strong></p>
-                <ul>
-                  <li>Uporabite slike z visoko kontrastnostjo</li>
-                  <li>Izogibajte se sivinam in gradientom</li>
-                  <li>Logotipi naj bodo v črno-beli že v izvirniku</li>
-                  <li>Večja resolucija slike = boljša kakovost tiska</li>
-                </ul>
-              </section>
-
-              {/* 10. OBLIKE */}
-              <section id="oblike" className="scroll-mt-24">
-                <h2>10. Oblike in črte</h2>
-
-                <h3>10.1 Pravokotnik</h3>
-                <ol>
-                  <li>Kliknite <strong>"Rectangle"</strong> v orodni vrstici</li>
-                  <li>Pravokotnik se doda na etiketo</li>
-                  <li>Prilagodite velikost, pozicijo in debelino črte</li>
-                </ol>
-                <p><strong>Uporaba:</strong> Okvirji, poudarjanje področij, tabele</p>
-
-                <h3>10.2 Elipsa / Krog</h3>
-                <ol>
-                  <li>Kliknite <strong>"Ellipse"</strong> v orodni vrstici</li>
-                  <li>Za krog nastavite enako širino in višino</li>
-                </ol>
-
-                <h3>10.3 Črte</h3>
-                <ol>
-                  <li>Kliknite <strong>"Line"</strong> v orodni vrstici</li>
-                  <li>Izberite smer: Horizontal ali Vertical</li>
-                  <li>Prilagodite dolžino in debelino</li>
-                </ol>
-              </section>
-
-              {/* 11. SHRANJEVANJE */}
-              <section id="shranjevanje" className="scroll-mt-24">
-                <h2>11. Shranjevanje in nalaganje</h2>
-
-                <h3>11.1 Shranjevanje etikete</h3>
-                <ol>
-                  <li>Vnesite ime etikete v polje <strong>"Label Name"</strong> (obvezno)</li>
-                  <li>Kliknite gumb <strong>"Save"</strong></li>
-                  <li>Etiketa se shrani v oblak</li>
-                </ol>
-                <p><strong>Opomba:</strong> Če etiketa z istim imenom že obstaja, se posodobi.</p>
-
-                <h3>11.2 Nalaganje etikete</h3>
-                <ol>
-                  <li>Kliknite gumb <strong>"Load"</strong></li>
-                  <li>Prikaže se seznam vaših shranjenih etiket</li>
-                  <li>Kliknite na želeno etiketo</li>
-                  <li>Etiketa se naloži v urejevalnik</li>
-                </ol>
-
-                <h3>11.3 Brisanje shranjene etikete</h3>
-                <ol>
-                  <li>Kliknite <strong>"Load"</strong></li>
-                  <li>Pri želeni etiketi kliknite ikono koša</li>
-                  <li>Potrdite brisanje</li>
-                </ol>
-                <p><strong>Opozorilo:</strong> Brisanje je trajno in ga ni mogoče razveljaviti.</p>
-              </section>
-
-              {/* 12. TISKANJE */}
-              <section id="tiskanje" className="scroll-mt-24">
-                <h2>12. Tiskanje</h2>
-
-                <h3>12.1 Načini tiskanja</h3>
-                <div className="not-prose overflow-x-auto">
-                  <table className="w-full text-sm border border-border rounded-lg">
-                    <thead className="bg-muted">
-                      <tr>
-                        <th className="px-4 py-3 text-left font-medium">Način</th>
-                        <th className="px-4 py-3 text-left font-medium">Opis</th>
-                        <th className="px-4 py-3 text-left font-medium">Zahteve</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-medium">Omrežno (TCP/9100)</td><td className="px-4 py-3">Direkten tisk preko IP</td><td className="px-4 py-3">Tiskalnik v omrežju, Print Relay</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">PDF</td><td className="px-4 py-3">Tisk preko sistemskega gonilnika</td><td className="px-4 py-3">Nameščen gonilnik tiskalnika</td></tr>
-                      <tr><td className="px-4 py-3 font-medium">Prenos ZPL</td><td className="px-4 py-3">Ročni prenos datoteke</td><td className="px-4 py-3">Orodje za pošiljanje ZPL</td></tr>
-                    </tbody>
-                  </table>
+              {/* 8. QR CODES */}
+              <section id="qr-codes" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <QrCode className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">8. QR Codes</h2>
                 </div>
 
-                <h3>12.2 Tiskanje preko omrežja</h3>
-                <p><strong>Predpogoji:</strong></p>
-                <ul>
-                  <li>Zebra tiskalnik povezan v omrežje (ethernet/WiFi)</li>
-                  <li>Znan IP naslov tiskalnika</li>
-                  <li>Print Relay Service nameščen in zagnan</li>
-                </ul>
-                <p><strong>Koraki:</strong></p>
-                <ol>
-                  <li>Kliknite <strong>"PRINT"</strong> v naslovni vrstici</li>
-                  <li>Izberite <strong>"Print on Port (Network)"</strong></li>
-                  <li>Vnesite IP naslov tiskalnika (npr. 192.168.1.100)</li>
-                  <li>Kliknite <strong>"Print"</strong></li>
-                </ol>
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">About QR Codes</h3>
+                    <p className="text-muted-foreground mb-3">QR (Quick Response) codes can store:</p>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                      {["Website URLs", "Text content", "Contact information", "Locations", "Custom data"].map((item, i) => (
+                        <div key={i} className="bg-muted/50 rounded-lg px-3 py-2 text-sm">{item}</div>
+                      ))}
+                    </div>
+                  </div>
 
-                <h3>12.3 Kako najti IP naslov tiskalnika</h3>
-                <p><strong>Možnost 1: Natisnite konfiguracijo</strong></p>
-                <ol>
-                  <li>Izklopite tiskalnik</li>
-                  <li>Držite gumb FEED/PAUSE</li>
-                  <li>Vklopite tiskalnik</li>
-                  <li>Spustite gumb, ko začne utripati</li>
-                  <li>Natisne se konfiguracija z IP naslovom</li>
-                </ol>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Adding a QR Code</h3>
+                      <ol className="space-y-2 text-sm text-muted-foreground">
+                        <li>1. Click <strong>"Barcode"</strong> in toolbar</li>
+                        <li>2. Select <strong>"QR Code"</strong></li>
+                        <li>3. Enter data (URL or text)</li>
+                        <li>4. Set magnification (1-10)</li>
+                        <li>5. Set error correction level</li>
+                        <li>6. Click <strong>"Add"</strong></li>
+                      </ol>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Error Correction Levels</h3>
+                      <div className="space-y-3">
+                        {[
+                          { level: "L (Low)", pct: "~7%", use: "Clean environments, small codes" },
+                          { level: "M (Medium)", pct: "~15%", use: "Standard use (default)" },
+                          { level: "Q (Quartile)", pct: "~25%", use: "Industrial environments" },
+                          { level: "H (High)", pct: "~30%", use: "Damaged or dirty labels" },
+                        ].map((item, i) => (
+                          <div key={i} className="flex items-center gap-4 text-sm">
+                            <span className="font-medium min-w-[90px]">{item.level}</span>
+                            <span className="text-muted-foreground min-w-[50px]">{item.pct}</span>
+                            <span className="text-muted-foreground">{item.use}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-4 italic">
+                        Higher correction = larger QR code, but more damage resistant.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </section>
 
-              {/* 13. IZVOZ ZPL */}
-              <section id="izvoz-zpl" className="scroll-mt-24">
-                <h2>13. Izvoz ZPL</h2>
+              {/* 9. IMAGES */}
+              <section id="images" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Image className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">9. Images & Logos</h2>
+                </div>
 
-                <h3>13.1 Kaj je ZPL?</h3>
-                <p>ZPL (Zebra Programming Language) je jezik za programiranje Zebra tiskalnikov. Vsaka etiketa je opisana z ZPL ukazi.</p>
-                <div className="not-prose bg-muted rounded-lg p-4 font-mono text-sm">
-                  <pre>{`^XA
+                <div className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Supported Formats</h3>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-primary" />
+                          <span><strong>PNG</strong> — Recommended, supports transparency</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-primary" />
+                          <span><strong>JPG/JPEG</strong> — Good compression</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-primary" />
+                          <span><strong>GIF</strong> — Static only (no animation)</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-primary" />
+                          <span><strong>BMP</strong> — Large file sizes</span>
+                        </li>
+                        <li className="flex items-center gap-2 text-muted-foreground">
+                          <span className="w-4 h-4 text-center">✕</span>
+                          <span><strong>SVG</strong> — Not supported, convert to PNG</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Adding an Image</h3>
+                      <ol className="space-y-2 text-sm text-muted-foreground">
+                        <li>1. Click <strong>"Image"</strong> in toolbar</li>
+                        <li>2. Click <strong>"Choose File"</strong> or drag and drop</li>
+                        <li>3. Image appears on label</li>
+                        <li>4. Resize and position as needed</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                    <h3 className="font-semibold mb-4">Tips for Best Results</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary mt-0.5" />
+                        <span>Use high-contrast images</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary mt-0.5" />
+                        <span>Avoid grayscale and gradients (thermal printing is 1-bit)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary mt-0.5" />
+                        <span>Use black and white logos in the source file</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary mt-0.5" />
+                        <span>Higher resolution source = better print quality</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* 10. SHAPES */}
+              <section id="shapes" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Square className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">10. Shapes & Lines</h2>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Rectangle</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground mb-4">
+                      <li>1. Click <strong>"Rectangle"</strong></li>
+                      <li>2. Adjust size and position</li>
+                      <li>3. Set line thickness</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Use for:</strong> Borders, highlighting areas, tables
+                    </p>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Ellipse / Circle</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground mb-4">
+                      <li>1. Click <strong>"Ellipse"</strong></li>
+                      <li>2. For a circle: set equal width and height</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Use for:</strong> Decorative elements, icons
+                    </p>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Lines</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground mb-4">
+                      <li>1. Click <strong>"Line"</strong></li>
+                      <li>2. Choose: Horizontal or Vertical</li>
+                      <li>3. Adjust length and thickness</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Use for:</strong> Separators, dividers
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* 11. SAVING */}
+              <section id="saving" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Save className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">11. Saving & Loading</h2>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Save a Label</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Enter a name in <strong>"Label Name"</strong></li>
+                      <li>2. Click <strong>"Save"</strong></li>
+                      <li>3. Label is saved to cloud</li>
+                    </ol>
+                    <p className="text-xs text-muted-foreground mt-4 italic">
+                      If a label with the same name exists, it will be updated.
+                    </p>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Load a Label</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Click <strong>"Load"</strong></li>
+                      <li>2. Browse your saved labels</li>
+                      <li>3. Click the label to load</li>
+                    </ol>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                    <h3 className="font-semibold mb-4">Delete a Label</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Click <strong>"Load"</strong></li>
+                      <li>2. Click the trash icon on the label</li>
+                      <li>3. Confirm deletion</li>
+                    </ol>
+                    <p className="text-xs text-destructive mt-4">
+                      Warning: Deletion is permanent and cannot be undone.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* 12. PRINTING */}
+              <section id="printing" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <PrinterIcon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">12. Printing</h2>
+                </div>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Print Methods</h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border rounded-lg">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-medium">Method</th>
+                            <th className="px-4 py-3 text-left font-medium">Description</th>
+                            <th className="px-4 py-3 text-left font-medium">Requirements</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr>
+                            <td className="px-4 py-3 font-medium">Network (TCP/9100)</td>
+                            <td className="px-4 py-3 text-muted-foreground">Direct printing via IP</td>
+                            <td className="px-4 py-3 text-muted-foreground">Network printer, Print Relay</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">PDF</td>
+                            <td className="px-4 py-3 text-muted-foreground">Print via system driver</td>
+                            <td className="px-4 py-3 text-muted-foreground">Installed printer driver</td>
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-3 font-medium">ZPL Download</td>
+                            <td className="px-4 py-3 text-muted-foreground">Manual file transfer</td>
+                            <td className="px-4 py-3 text-muted-foreground">ZPL sending tool</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Network Printing</h3>
+                      <p className="text-sm text-muted-foreground mb-3"><strong>Prerequisites:</strong></p>
+                      <ul className="space-y-1 text-sm text-muted-foreground mb-4">
+                        <li>• Zebra printer on network (ethernet/WiFi)</li>
+                        <li>• Known printer IP address</li>
+                        <li>• Print Relay Service running</li>
+                      </ul>
+                      <p className="text-sm text-muted-foreground mb-2"><strong>Steps:</strong></p>
+                      <ol className="space-y-1 text-sm text-muted-foreground">
+                        <li>1. Click <strong>"PRINT"</strong> in header</li>
+                        <li>2. Select <strong>"Print on Port (Network)"</strong></li>
+                        <li>3. Enter printer IP (e.g., 192.168.1.100)</li>
+                        <li>4. Click <strong>"Print"</strong></li>
+                      </ol>
+                    </div>
+
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Finding Printer IP Address</h3>
+                      <p className="text-sm text-muted-foreground mb-3">Print a configuration page:</p>
+                      <ol className="space-y-2 text-sm text-muted-foreground">
+                        <li>1. Turn off the printer</li>
+                        <li>2. Hold the FEED/PAUSE button</li>
+                        <li>3. Turn on the printer</li>
+                        <li>4. Release when light starts blinking</li>
+                        <li>5. Configuration prints with IP address</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* 13. ZPL EXPORT */}
+              <section id="zpl-export" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <FileCode className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">13. ZPL Export</h2>
+                </div>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">What is ZPL?</h3>
+                    <p className="text-muted-foreground mb-4">
+                      ZPL (Zebra Programming Language) is the native language for Zebra printers. Each label is described with ZPL commands.
+                    </p>
+                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                      <pre>{`^XA
 ^PW800
 ^LL400
 ^FO50,50^A0N,30,30^FDHello World^FS
 ^FO50,100^BEN,50,Y,N^FD5901234567890^FS
 ^XZ`}</pre>
-                </div>
+                    </div>
+                  </div>
 
-                <h3>13.2 Izvoz ZPL</h3>
-                <ol>
-                  <li>Kliknite <strong>"Export ZPL"</strong> v orodni vrstici</li>
-                  <li>Izberite način izvoza:
-                    <ul>
-                      <li><strong>Placeholders</strong> = ohrani {`{{polja}}`} za ERP</li>
-                      <li><strong>Fixed Values</strong> = vstavi dejanske vrednosti</li>
-                    </ul>
-                  </li>
-                  <li>Datoteka .zpl se prenese</li>
-                </ol>
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border max-w-xl">
+                    <h3 className="font-semibold mb-4">Export ZPL</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Click <strong>"Export ZPL"</strong> in toolbar</li>
+                      <li>2. Choose export mode:
+                        <ul className="ml-4 mt-1 space-y-1">
+                          <li>• <strong>Placeholders</strong> — Keep {`{{fields}}`} for ERP</li>
+                          <li>• <strong>Fixed Values</strong> — Insert actual values</li>
+                        </ul>
+                      </li>
+                      <li>3. Download .zpl file</li>
+                    </ol>
+                  </div>
+                </div>
               </section>
 
-              {/* 14. NAROČNINA */}
-              <section id="narocnina" className="scroll-mt-24">
-                <h2>14. Naročnina in račun</h2>
-
-                <h3>14.1 Brezplačni preizkus</h3>
-                <ul>
-                  <li><strong>Trajanje:</strong> 14 dni od registracije</li>
-                  <li><strong>Funkcionalnosti:</strong> Vse funkcionalnosti brez omejitev</li>
-                  <li><strong>Kreditna kartica:</strong> Ni potrebna</li>
-                </ul>
-
-                <h3>14.2 Pro naročnina</h3>
-                <div className="not-prose bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-6 border border-border">
-                  <p className="text-2xl font-bold mb-2">9,99 € <span className="text-base font-normal text-muted-foreground">/ mesec</span></p>
-                  <ul className="space-y-2 text-sm">
-                    <li>✓ Neomejeno ustvarjanje etiket</li>
-                    <li>✓ Shranjevanje v oblaku</li>
-                    <li>✓ Izvoz v ZPL format</li>
-                    <li>✓ Tiskanje na Zebra tiskalnike</li>
-                    <li>✓ Vsi tipi črtnih kod in QR kod</li>
-                    <li>✓ Slike in logotipi</li>
-                    <li>✓ Podpora za vse DPI</li>
-                    <li>✓ Prednostna podpora</li>
-                  </ul>
+              {/* 14. SUBSCRIPTION */}
+              <section id="subscription" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <CreditCard className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">14. Subscription</h2>
                 </div>
 
-                <h3>14.3 Upravljanje naročnine</h3>
-                <ol>
-                  <li>Pojdite na stran <strong>Naročnina</strong></li>
-                  <li>Kliknite <strong>"Upravljaj naročnino"</strong></li>
-                  <li>Odpre se Stripe portal, kjer lahko spremenite plačilno metodo, pregledate zgodovino plačil ali prekličete naročnino</li>
-                </ol>
+                <div className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-muted/30 rounded-xl p-6 border border-border">
+                      <h3 className="font-semibold mb-4">Free Trial</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li><strong>Duration:</strong> 14 days from registration</li>
+                        <li><strong>Features:</strong> Full access, no limitations</li>
+                        <li><strong>Credit card:</strong> Not required</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-6 border border-primary/20">
+                      <h3 className="font-semibold mb-2">Pro Subscription</h3>
+                      <p className="text-2xl font-bold mb-4">€9.99 <span className="text-base font-normal text-muted-foreground">/ month</span></p>
+                      <ul className="space-y-2 text-sm">
+                        {[
+                          "Unlimited label creation",
+                          "Cloud storage",
+                          "ZPL export",
+                          "Direct Zebra printing",
+                          "All barcode types & QR codes",
+                          "Images & logos",
+                          "All DPI support",
+                          "Priority support"
+                        ].map((feature, i) => (
+                          <li key={i} className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-primary" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-6 border border-border max-w-xl">
+                    <h3 className="font-semibold mb-4">Manage Subscription</h3>
+                    <ol className="space-y-2 text-sm text-muted-foreground">
+                      <li>1. Go to <strong>Subscription</strong> page</li>
+                      <li>2. Click <strong>"Manage Subscription"</strong></li>
+                      <li>3. Stripe portal opens where you can:
+                        <ul className="ml-4 mt-1 space-y-1">
+                          <li>• Change payment method</li>
+                          <li>• View payment history</li>
+                          <li>• Cancel subscription</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
               </section>
 
-              {/* 15. BLIŽNJICE */}
-              <section id="bliznjice" className="scroll-mt-24">
-                <h2>15. Bližnjice na tipkovnici</h2>
+              {/* 15. SHORTCUTS */}
+              <section id="shortcuts" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Keyboard className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">15. Keyboard Shortcuts</h2>
+                </div>
 
-                <h3>15.1 Splošne bližnjice</h3>
-                <div className="not-prose overflow-x-auto">
+                <div className="overflow-x-auto">
                   <table className="w-full text-sm border border-border rounded-lg">
                     <thead className="bg-muted">
                       <tr>
-                        <th className="px-4 py-3 text-left font-medium">Bližnjica</th>
-                        <th className="px-4 py-3 text-left font-medium">Dejanje</th>
+                        <th className="px-4 py-3 text-left font-medium">Shortcut</th>
+                        <th className="px-4 py-3 text-left font-medium">Action</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border">
-                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + C</td><td className="px-4 py-3">Kopiraj izbrani element</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + V</td><td className="px-4 py-3">Prilepi element</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">Delete / Backspace</td><td className="px-4 py-3">Izbriši izbrani element</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">Escape</td><td className="px-4 py-3">Prekliči izbiro</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">↑ ↓ ← →</td><td className="px-4 py-3">Premakni za 1 piksel</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">Shift + ↑↓←→</td><td className="px-4 py-3">Premakni za 10 pikslov</td></tr>
-                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + A</td><td className="px-4 py-3">Izberi vse elemente</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + C</td><td className="px-4 py-3 text-muted-foreground">Copy selected element</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + V</td><td className="px-4 py-3 text-muted-foreground">Paste element</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Delete / Backspace</td><td className="px-4 py-3 text-muted-foreground">Delete selected element</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Escape</td><td className="px-4 py-3 text-muted-foreground">Deselect element</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">↑ ↓ ← →</td><td className="px-4 py-3 text-muted-foreground">Move by 1 pixel</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Shift + ↑↓←→</td><td className="px-4 py-3 text-muted-foreground">Move by 10 pixels</td></tr>
+                      <tr><td className="px-4 py-3 font-mono">Ctrl/Cmd + A</td><td className="px-4 py-3 text-muted-foreground">Select all elements</td></tr>
                     </tbody>
                   </table>
                 </div>
               </section>
 
-              {/* 16. ODPRAVLJANJE TEŽAV */}
-              <section id="tezave" className="scroll-mt-24">
-                <h2>16. Odpravljanje težav</h2>
-
-                <div className="not-prose">
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="print">
-                      <AccordionTrigger className="text-left">Tiskanje ne deluje</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-2">
-                        <p><strong>Rešitve:</strong></p>
-                        <ul className="list-disc pl-6 space-y-1">
-                          <li>Preverite IP naslov - pingajte tiskalnik: ping 192.168.1.100</li>
-                          <li>Preverite port 9100 - tiskalnik mora imeti odprt port</li>
-                          <li>Preverite Print Relay Service - obiščite http://localhost:8080/health</li>
-                          <li>Preverite tiskalnik - ali je prižgan, ima papir/trak, sveti napaka?</li>
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="barcode">
-                      <AccordionTrigger className="text-left">Črtna koda se ne skenira</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-2">
-                        <p><strong>Rešitve:</strong></p>
-                        <ul className="list-disc pl-6 space-y-1">
-                          <li>Preverite podatke - EAN-13 mora imeti 12-13 številk</li>
-                          <li>Povečajte velikost - nastavite večji Size</li>
-                          <li>Preverite kontrast - uporabite črn tisk na belem</li>
-                          <li>Preverite DPI - DPI v aplikaciji mora ustrezati tiskalniku</li>
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="size">
-                      <AccordionTrigger className="text-left">Etiketa je premajhna/prevelika</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-2">
-                        <p><strong>Rešitve:</strong></p>
-                        <ul className="list-disc pl-6 space-y-1">
-                          <li>Preverite DPI - nastavitev mora ustrezati tiskalniku</li>
-                          <li>Preverite dimenzije - širina in višina morata ustrezati dejanski etiketi</li>
-                          <li>Preverite nastavitve tiskalnika - Print Width in Label Length</li>
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="image">
-                      <AccordionTrigger className="text-left">Slika je slabe kakovosti</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-2">
-                        <p><strong>Rešitve:</strong></p>
-                        <ul className="list-disc pl-6 space-y-1">
-                          <li>Uporabite večjo izvorno sliko - večja resolucija = boljša kakovost</li>
-                          <li>Uporabite črno-belo sliko - termični tisk je 1-bitni</li>
-                          <li>Povečajte kontrast - sivine se slabo natisnejo</li>
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="slow">
-                      <AccordionTrigger className="text-left">Aplikacija je počasna</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-2">
-                        <p><strong>Rešitve:</strong></p>
-                        <ul className="list-disc pl-6 space-y-1">
-                          <li>Osvežite stran - F5 ali Ctrl+R</li>
-                          <li>Počistite predpomnilnik - Ctrl+Shift+Delete → Počisti</li>
-                          <li>Zmanjšajte zoom - visok zoom upočasni prikaz</li>
-                          <li>Uporabite Chrome - najboljša podpora</li>
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+              {/* 16. TROUBLESHOOTING */}
+              <section id="troubleshooting" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <AlertCircle className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">16. Troubleshooting</h2>
                 </div>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="print" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Printing doesn't work</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>Check IP address</strong> — Ping the printer: <code className="bg-muted px-1 rounded">ping 192.168.1.100</code></li>
+                        <li><strong>Check port 9100</strong> — Printer must have this port open</li>
+                        <li><strong>Check Print Relay</strong> — Visit <code className="bg-muted px-1 rounded">http://localhost:8080/health</code></li>
+                        <li><strong>Check printer</strong> — Power on? Paper/ribbon loaded? Error light?</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="barcode" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Barcode won't scan</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>Check data</strong> — EAN-13 must have 12-13 digits</li>
+                        <li><strong>Increase size</strong> — Set a larger module width</li>
+                        <li><strong>Check contrast</strong> — Use black print on white label</li>
+                        <li><strong>Check DPI</strong> — Application DPI must match printer</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="size" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Label is too small or too large</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>Check DPI</strong> — Setting must match your printer</li>
+                        <li><strong>Check dimensions</strong> — Width and height must match actual label</li>
+                        <li><strong>Check printer settings</strong> — Print Width and Label Length</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="image" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Image quality is poor</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>Use larger source image</strong> — Higher resolution = better quality</li>
+                        <li><strong>Use black and white</strong> — Thermal printing is 1-bit</li>
+                        <li><strong>Increase contrast</strong> — Grayscale prints poorly</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="slow" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Application is slow</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li><strong>Refresh page</strong> — Press F5 or Ctrl+R</li>
+                        <li><strong>Clear cache</strong> — Ctrl+Shift+Delete → Clear</li>
+                        <li><strong>Reduce zoom</strong> — High zoom levels slow rendering</li>
+                        <li><strong>Use Chrome</strong> — Best browser support</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </section>
 
               {/* 17. FAQ */}
-              <section id="faq" className="scroll-mt-24">
-                <h2>17. Pogosta vprašanja (FAQ)</h2>
-
-                <div className="not-prose">
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="install">
-                      <AccordionTrigger className="text-left">Ali potrebujem kaj namestiti?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Ne, aplikacija deluje v brskalniku. Za tiskanje preko omrežja potrebujete Print Relay Service.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="browsers">
-                      <AccordionTrigger className="text-left">Kateri brskalniki so podprti?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Chrome (priporočeno), Edge, Firefox, Safari. Najnovejše različice.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="printers">
-                      <AccordionTrigger className="text-left">Kateri tiskalniki so podprti?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Vsi Zebra termični tiskalniki z ZPL podporo - praktično vsi modeli.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="other-printers">
-                      <AccordionTrigger className="text-left">Ali deluje z drugimi tiskalniki (TSC, Honeywell)?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        ZPL kodo lahko izvozite in jo uporabite, če tiskalnik podpira ZPL. Nekateri ne-Zebra tiskalniki imajo ZPL emulacijo.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="checksum">
-                      <AccordionTrigger className="text-left">Zakaj se kontrolna številka samodejno spremeni?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Kontrolna številka se izračuna po standardu GS1. Če vnesete napačno, jo aplikacija popravi.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="storage">
-                      <AccordionTrigger className="text-left">Kje so shranjene moje etikete?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        V varnem oblaku. Dostopne so samo vam.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="cancel">
-                      <AccordionTrigger className="text-left">Kaj se zgodi z etiketami po preklicu?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Ostanejo shranjene 30 dni. V tem času lahko ponovno aktivirate naročnino.
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="cards">
-                      <AccordionTrigger className="text-left">Katere kartice sprejemate?</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        Vse večje kartice: Visa, Mastercard, American Express, itd. Plačila obdeluje Stripe.
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+              <section id="faq" className="scroll-mt-24 mb-16">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <HelpCircle className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-bold">17. Frequently Asked Questions</h2>
                 </div>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="install" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Do I need to install anything?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      No, the application runs entirely in your browser. For network printing, you'll need the Print Relay Service.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="browsers" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Which browsers are supported?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Chrome (recommended), Edge, Firefox, and Safari. Use the latest versions for best performance.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="printers" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Which printers are supported?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      All Zebra thermal printers with ZPL support — virtually all models.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="other-printers" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Does it work with other printers (TSC, Honeywell)?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      You can export ZPL code and use it if your printer supports ZPL. Some non-Zebra printers have ZPL emulation mode.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="checksum" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Why does the check digit change automatically?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      The check digit is calculated according to GS1 standard. If you enter an incorrect one, the application corrects it automatically.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="storage" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Where are my labels stored?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      In secure cloud storage. Your labels are accessible only to you.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="cancel" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">What happens to my labels if I cancel?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Your labels remain stored for 30 days. You can reactivate your subscription during this time to access them.
+                    </AccordionContent>
+                  </AccordionItem>
+                  
+                  <AccordionItem value="cards" className="border-border">
+                    <AccordionTrigger className="text-left hover:no-underline">Which payment cards do you accept?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      All major cards: Visa, Mastercard, American Express, and more. Payments are processed by Stripe.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </section>
 
-              {/* PODPORA */}
-              <section className="scroll-mt-24 mt-16">
-                <div className="not-prose bg-muted/50 rounded-2xl p-8">
-                  <h2 className="text-2xl font-bold mb-4">Potrebujete pomoč?</h2>
+              {/* SUPPORT */}
+              <section className="scroll-mt-24 mb-16">
+                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
+                  <h2 className="text-2xl font-bold mb-4">Need Help?</h2>
                   <p className="text-muted-foreground mb-6">
-                    Za vsa vprašanja in podporo nas kontaktirajte.
+                    Have questions or need support? We're here to help.
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mb-4">
                     <Mail className="w-5 h-5 text-primary" />
-                    <a href="mailto:podpora@labeldesigner.si" className="text-primary hover:underline">
-                      podpora@labeldesigner.si
+                    <a href="mailto:support@labeldesigner.si" className="text-primary hover:underline font-medium">
+                      support@labeldesigner.si
                     </a>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    <strong>Odzivni čas:</strong> Naročniki do 24 ur • Preizkusni uporabniki do 48 ur
-                  </p>
+                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                    <span><strong>Subscribers:</strong> Response within 24 hours</span>
+                    <span><strong>Trial users:</strong> Response within 48 hours</span>
+                  </div>
                 </div>
               </section>
 
               {/* Footer */}
-              <footer className="mt-16 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-                <p>© 2024 Label Designer PTI. Vse pravice pridržane.</p>
-                <p className="mt-1">Različica dokumentacije: 1.0 • Zadnja posodobitev: December 2024</p>
+              <footer className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+                <p>© 2025 Label Designer PTI. All rights reserved.</p>
+                <p className="mt-1">Documentation v1.0 • Last updated: January 2025</p>
               </footer>
             </main>
           </div>
