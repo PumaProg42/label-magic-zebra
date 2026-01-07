@@ -2,7 +2,7 @@ import { Brain, Monitor, Plug, Sparkles } from "lucide-react";
 const problems = [{
   icon: Brain,
   title: "Vendor-locked software",
-  description: "ZebraDesigner in podobni programi zahtevajo ure učenja. Vi potrebujete etiketo zdaj."
+  description: "Many label tools only work with a specific printer brand, limiting flexibility and increasing long-term costs when hardware needs to change."
 }, {
   icon: Monitor,
   title: "Complex desktop installations",
