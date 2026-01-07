@@ -15,60 +15,60 @@ const Footer = () => {
               <span className="font-bold text-xl">Label Designer PTI</span>
             </div>
             <p className="text-background/70 mb-6 max-w-sm">
-              Profesionalno oblikovanje etiket za Zebra tiskalnike. Enostavno, hitro, brez namestitve.
+              Professional label design for thermal printers. Simple, fast, no installation required.
             </p>
             <div className="flex items-center gap-2 text-background/70">
               <Mail className="w-4 h-4" />
-              <a href="mailto:podpora@labeldesigner.si" className="hover:text-background transition-colors">
-                podpora@labeldesigner.si
+              <a href="mailto:support@labeldesigner.si" className="hover:text-background transition-colors">
+                support@labeldesigner.si
               </a>
             </div>
           </div>
           
           {/* Product */}
           <div>
-            <h4 className="font-semibold mb-4">Produkt</h4>
+            <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-3 text-background/70">
               <li>
-                <a href="#funkcionalnosti" className="hover:text-background transition-colors">Funkcionalnosti</a>
+                <a href="#funkcionalnosti" className="hover:text-background transition-colors">Features</a>
               </li>
               <li>
-                <a href="#cenik" className="hover:text-background transition-colors">Cenik</a>
+                <a href="#cenik" className="hover:text-background transition-colors">Pricing</a>
               </li>
               <li>
-                <a href="#tiskalniki" className="hover:text-background transition-colors">Podprti tiskalniki</a>
+                <a href="#tiskalniki" className="hover:text-background transition-colors">Supported printers</a>
               </li>
             </ul>
           </div>
           
           {/* Support */}
           <div>
-            <h4 className="font-semibold mb-4">Podpora</h4>
+            <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-3 text-background/70">
               <li>
-                <a href="#faq" className="hover:text-background transition-colors">Pogosta vprašanja</a>
+                <a href="#faq" className="hover:text-background transition-colors">FAQ</a>
               </li>
               <li>
-                <a href="#kontakt" className="hover:text-background transition-colors">Kontakt</a>
+                <a href="#kontakt" className="hover:text-background transition-colors">Contact</a>
               </li>
               <li>
-                <Link to="/dokumentacija" className="hover:text-background transition-colors">Dokumentacija</Link>
+                <Link to="/dokumentacija" className="hover:text-background transition-colors">Documentation</Link>
               </li>
             </ul>
           </div>
           
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">Podjetje</h4>
+            <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3 text-background/70">
               <li>
-                <a href="#o-nas" className="hover:text-background transition-colors">O nas</a>
+                <a href="#o-nas" className="hover:text-background transition-colors">About us</a>
               </li>
               <li>
-                <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">Pogoji uporabe</Link>
+                <Link to="/pogoji-uporabe" className="hover:text-background transition-colors">Terms of use</Link>
               </li>
               <li>
-                <Link to="/zasebnost" className="hover:text-background transition-colors">Politika zasebnosti</Link>
+                <Link to="/zasebnost" className="hover:text-background transition-colors">Privacy policy</Link>
               </li>
             </ul>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/50">
-            © {new Date().getFullYear()} Label Designer PTI. Vse pravice pridržane.
+            © {new Date().getFullYear()} Label Designer PTI. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">

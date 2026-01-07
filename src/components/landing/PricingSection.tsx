@@ -2,14 +2,14 @@ import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const features = [
-  "Neomejeno ustvarjanje etiket",
-  "Shranjevanje v oblaku",
-  "Izvoz v ZPL format",
-  "Direktno tiskanje na Zebra tiskalnike",
-  "Vsi tipi črtnih kod in QR kod",
-  "Slike in logotipi",
-  "Podpora za 203, 300 in 600 DPI",
-  "Prednostna podpora",
+  "Unlimited label creation",
+  "Cloud storage",
+  "Export to ZPL format",
+  "Direct printing to Zebra printers",
+  "All barcode and QR code types",
+  "Images and logos",
+  "Support for 203, 300, and 600 DPI",
+  "Priority support",
 ];
 
 const PricingSection = () => {
@@ -18,7 +18,7 @@ const PricingSection = () => {
       <div className="container-narrow">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Preprosto <span className="gradient-text">oblikovanje cen</span>
+            Simple <span className="gradient-text">pricing</span>
           </h2>
         </div>
         
@@ -31,11 +31,11 @@ const PricingSection = () => {
               {/* Header */}
               <div className="text-center mb-8">
                 <span className="inline-block px-4 py-1 text-sm font-medium gradient-bg text-primary-foreground rounded-full mb-4">
-                  Pro naročnina
+                  Pro subscription
                 </span>
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-5xl md:text-6xl font-bold gradient-text">9,99 €</span>
-                  <span className="text-muted-foreground">/mesec</span>
+                  <span className="text-5xl md:text-6xl font-bold gradient-text">€9.99</span>
+                  <span className="text-muted-foreground">/month</span>
                 </div>
               </div>
               
@@ -58,13 +58,13 @@ const PricingSection = () => {
               {/* CTA */}
               <Button variant="gradient" size="xl" className="w-full" asChild>
                 <a href="https://app.perko-tehtnice.si/" target="_blank" rel="noopener noreferrer">
-                  Začnite brezplačni 14-dnevni preizkus
+                  Start your free 14-day trial
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
               
               <p className="text-center text-sm text-muted-foreground mt-4">
-                Brez kreditne kartice. Prekličite kadarkoli.
+                No credit card required. Cancel anytime.
               </p>
             </div>
           </div>
