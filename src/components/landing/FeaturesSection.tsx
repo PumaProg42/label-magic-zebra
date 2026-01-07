@@ -5,7 +5,7 @@ const features = [{
   description: "Dodajte fiksno besedilo ali dinamična polja, ki jih zamenja vaš ERP/WMS sistem. Nastavite pisavo, velikost in poravnavo."
 }, {
   icon: BarChart3,
-  title: "Vse vrste črtnih kod",
+  title: "All common barcode types",
   description: "EAN-8, EAN-13, Code 128 — z avtomatičnim izračunom kontrolne številke. Nastavite širino in višino po želji."
 }, {
   icon: QrCode,
