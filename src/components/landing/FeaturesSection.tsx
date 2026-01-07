@@ -22,7 +22,7 @@ const features = [{
 }, {
   icon: Cloud,
   title: "Cloud storage",
-  description: "Shranite etikete v oblak in dostopajte do njih s kateregakoli računalnika. Nikoli več izgubljenih datotek."
+  description: "Save your labels in the cloud and access them from any computer. No more lost files."
 }];
 const FeaturesSection = () => {
   return <section className="section-padding bg-muted/30">
