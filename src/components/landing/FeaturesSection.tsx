@@ -6,7 +6,7 @@ const features = [{
 }, {
   icon: BarChart3,
   title: "All common barcode types",
-  description: "EAN-8, EAN-13, Code 128 — z avtomatičnim izračunom kontrolne številke. Nastavite širino in višino po želji."
+  description: "EAN-8, EAN-13 and Code 128 with automatic check digit calculation. Adjust width and height as needed."
 }, {
   icon: QrCode,
   title: "QR codes",
