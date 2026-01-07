@@ -50,7 +50,8 @@ const ProblemSection = () => {
                     Label Designer PTI simplifies  <span className="gradient-text">everything</span>
                   </h3>
                   <p className="text-lg text-muted-foreground max-w-2xl">
-                    Odprite brskalnik, oblikujte etiketo z vlečenjem elementov, kliknite Natisni. Končano. Deluje na vsakem računalniku, brez namestitve, brez licenc za vsako delovno postajo.
+                    Open your browser, design the label by dragging elements, click Print. Done.
+Works on any computer — no installation, no per-workstation licenses.
                   </p>
                 </div>
               </div>
