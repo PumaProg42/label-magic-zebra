@@ -7,7 +7,7 @@ const steps = [{
 }, {
   icon: FileText,
   step: "02",
-  title: "Dodajte vsebino",
+  title: "Add content",
   description: "Vnesite podatke za črtne kode, besedilo za etiketo, naložite logotip. Vidite natančen predogled, kako bo etiketa izgledala."
 }, {
   icon: Printer,
