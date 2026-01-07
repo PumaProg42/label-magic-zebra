@@ -67,12 +67,12 @@ const UseCasesSection = () => {
               </div>
               
               {/* Label preview image */}
-              <div className="px-8 pb-8">
-                <div className="bg-white rounded-xl p-3 border border-border/50 shadow-sm">
+              <div className="px-4 sm:px-8 pb-6 sm:pb-8">
+                <div className="bg-white rounded-xl p-2 sm:p-3 border border-border/50 shadow-sm group-hover:shadow-md transition-all duration-300 [perspective:1000px]">
                   <img 
                     src={useCase.image} 
                     alt={`${useCase.title} example`}
-                    className="w-full h-auto rounded-lg"
+                    className="w-full max-w-[200px] sm:max-w-[280px] mx-auto h-auto rounded-lg transition-transform duration-500 group-hover:[transform:rotateY(5deg)_rotateX(3deg)_scale(1.02)]"
                   />
                 </div>
               </div>
