@@ -1,4 +1,8 @@
 import { Warehouse, Truck, ShoppingBag, Factory } from "lucide-react";
+import labelWarehouse from "@/assets/label-warehouse.png";
+import labelShipping from "@/assets/label-shipping.png";
+import labelPrice from "@/assets/label-price.png";
+import labelTracking from "@/assets/label-tracking.png";
 
 const useCases = [
   {
@@ -6,24 +10,28 @@ const useCases = [
     title: "Warehouse labels",
     description: "Shelf location, product barcode, name, and quantity. Simplify inventory and product search.",
     tag: "Warehouse",
+    image: labelWarehouse,
   },
   {
     icon: Truck,
     title: "Shipping labels",
     description: "QR code for shipment tracking, recipient address, company logo. Professional labels for every package.",
     tag: "Transport",
+    image: labelShipping,
   },
   {
     icon: ShoppingBag,
     title: "Price labels",
     description: "EAN-13 barcode for checkout, price, product name. Quick price updates.",
     tag: "Retail",
+    image: labelPrice,
   },
   {
     icon: Factory,
     title: "Tracking labels",
     description: "Serial number, Code 128 barcode, production date. Complete product traceability.",
     tag: "Manufacturing",
+    image: labelTracking,
   },
 ];
 
@@ -58,17 +66,14 @@ const UseCasesSection = () => {
                 <p className="text-muted-foreground">{useCase.description}</p>
               </div>
               
-              {/* Mock label preview */}
+              {/* Label preview image */}
               <div className="px-8 pb-8">
-                <div className="bg-muted/50 rounded-xl p-4 border border-border/50">
-                  <div className="flex items-center justify-between text-xs text-muted-foreground">
-                    <span>Label example</span>
-                    <div className="flex gap-1">
-                      {[...Array(8)].map((_, i) => (
-                        <div key={i} className="w-0.5 h-4 bg-muted-foreground/50" />
-                      ))}
-                    </div>
-                  </div>
+                <div className="bg-white rounded-xl p-3 border border-border/50 shadow-sm">
+                  <img 
+                    src={useCase.image} 
+                    alt={`${useCase.title} example`}
+                    className="w-full h-auto rounded-lg"
+                  />
                 </div>
               </div>
             </div>
