@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Printer, QrCode, Barcode, Type } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import labelDesignerPreview from "@/assets/label-designer-preview.png";
 
@@ -49,6 +49,29 @@ const HeroSection = () => {
                 alt="Label Designer PTI - Professional label design interface" 
                 className="w-full h-auto"
               />
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground p-3 rounded-2xl shadow-lg animate-float">
+              <Barcode className="w-6 h-6" />
+            </div>
+            <div 
+              className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground p-3 rounded-2xl shadow-lg animate-float"
+              style={{ animationDelay: '1s' }}
+            >
+              <QrCode className="w-6 h-6" />
+            </div>
+            <div 
+              className="absolute top-1/3 -right-6 bg-card text-foreground p-3 rounded-2xl shadow-lg border border-border animate-float"
+              style={{ animationDelay: '2s' }}
+            >
+              <Printer className="w-6 h-6" />
+            </div>
+            <div 
+              className="absolute top-1/2 -left-6 bg-card text-foreground p-3 rounded-2xl shadow-lg border border-border animate-float"
+              style={{ animationDelay: '0.5s' }}
+            >
+              <Type className="w-6 h-6" />
             </div>
           </div>
         </div>
