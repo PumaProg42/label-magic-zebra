@@ -16,9 +16,9 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Profesionalne etikete za Zebra tiskalnike —{" "}
-                <span className="gradient-text">brez zapletene programske opreme</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Design labels in your browser.{" "}
+                <span className="gradient-text">Print on any thermal printer.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Oblikujte etikete vizualno, dodajte črtne kode in QR kode, nato natisnite direktno na vaš Zebra tiskalnik. Vse v brskalniku, brez namestitve.
