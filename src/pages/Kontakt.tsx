@@ -26,8 +26,8 @@ const Kontakt = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Sporočilo poslano!",
-      description: "Odgovorili vam bomo v najkrajšem možnem času.",
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
     });
 
     setFormData({ name: "", email: "", subject: "", message: "" });
@@ -37,10 +37,10 @@ const Kontakt = () => {
   return (
     <>
       <Helmet>
-        <title>Kontakt | Label Designer PTI</title>
+        <title>Contact | Label Designer PTI</title>
         <meta
           name="description"
-          content="Kontaktirajte nas za vprašanja o Label Designer PTI. Z veseljem vam pomagamo."
+          content="Contact us for questions about Label Designer PTI. We're happy to help."
         />
       </Helmet>
 
@@ -50,7 +50,7 @@ const Kontakt = () => {
           <div className="container-wide py-4 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeft className="w-4 h-4" />
-              <span>Nazaj</span>
+              <span>Back</span>
             </Link>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
@@ -65,9 +65,9 @@ const Kontakt = () => {
           <div className="max-w-5xl mx-auto">
             {/* Page Title */}
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Kontaktirajte nas</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact us</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Imate vprašanja glede Label Designer PTI? Z veseljem vam pomagamo. Izpolnite obrazec ali nas kontaktirajte direktno.
+                Have questions about Label Designer PTI? We're happy to help. Fill out the form or contact us directly.
               </p>
             </div>
 
@@ -75,15 +75,15 @@ const Kontakt = () => {
               {/* Contact Form */}
               <div className="lg:col-span-3">
                 <div className="bg-card rounded-2xl border border-border/50 p-8 shadow-sm">
-                  <h2 className="text-2xl font-semibold mb-6">Pošljite nam sporočilo</h2>
+                  <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Ime in priimek</Label>
+                        <Label htmlFor="name">Full name</Label>
                         <Input
                           id="name"
-                          placeholder="Janez Novak"
+                          placeholder="John Smith"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           required
@@ -91,11 +91,11 @@ const Kontakt = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-pošta</Label>
+                        <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
                           type="email"
-                          placeholder="janez@primer.si"
+                          placeholder="john@example.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           required
@@ -105,10 +105,10 @@ const Kontakt = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Zadeva</Label>
+                      <Label htmlFor="subject">Subject</Label>
                       <Input
                         id="subject"
-                        placeholder="O čem bi radi govorili?"
+                        placeholder="What would you like to discuss?"
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         required
@@ -117,10 +117,10 @@ const Kontakt = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Sporočilo</Label>
+                      <Label htmlFor="message">Message</Label>
                       <Textarea
                         id="message"
-                        placeholder="Vaše sporočilo..."
+                        placeholder="Your message..."
                         rows={6}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -137,10 +137,10 @@ const Kontakt = () => {
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
-                        "Pošiljanje..."
+                        "Sending..."
                       ) : (
                         <>
-                          Pošlji sporočilo
+                          Send message
                           <Send className="w-4 h-4 ml-2" />
                         </>
                       )}
@@ -152,7 +152,7 @@ const Kontakt = () => {
               {/* Contact Info */}
               <div className="lg:col-span-2 space-y-6">
                 <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold mb-4">Kontaktni podatki</h3>
+                  <h3 className="text-lg font-semibold mb-4">Contact information</h3>
                   
                   <div className="space-y-4">
                     <a 
@@ -161,47 +161,47 @@ const Kontakt = () => {
                     >
                       <Mail className="w-5 h-5 mt-0.5 text-primary" />
                       <div>
-                        <p className="font-medium text-foreground">E-pošta</p>
+                        <p className="font-medium text-foreground">Email</p>
                         <p>prodaja@perko-tehtnice.si</p>
                       </div>
                     </a>
 
                     <a 
-                      href="tel:+38641123456" 
+                      href="tel:+38631626363" 
                       className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <Phone className="w-5 h-5 mt-0.5 text-primary" />
                       <div>
-                        <p className="font-medium text-foreground">Telefon</p>
-                        <p>+386 41 123 456</p>
+                        <p className="font-medium text-foreground">Phone</p>
+                        <p>+386 31 626 363</p>
                       </div>
                     </a>
 
                     <div className="flex items-start gap-3 text-muted-foreground">
                       <MapPin className="w-5 h-5 mt-0.5 text-primary" />
                       <div>
-                        <p className="font-medium text-foreground">Naslov</p>
-                        <p>Ulica 123<br />1000 Ljubljana<br />Slovenija</p>
+                        <p className="font-medium text-foreground">Address</p>
+                        <p>Zalog 2<br />4204 Golnik<br />Slovenia</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
-                  <h3 className="text-lg font-semibold mb-2">Hitri odzivni čas</h3>
+                  <h3 className="text-lg font-semibold mb-2">Quick response time</h3>
                   <p className="text-muted-foreground text-sm">
-                    Na vsa sporočila odgovorimo v roku 24 ur. Za nujne zadeve nas pokličite po telefonu.
+                    We respond to all messages within 24 hours. For urgent matters, please call us.
                   </p>
                 </div>
 
                 <div className="bg-card rounded-2xl border border-border/50 p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold mb-2">Podpora</h3>
+                  <h3 className="text-lg font-semibold mb-2">Support</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Potrebujete pomoč pri uporabi aplikacije? Preverite našo dokumentacijo.
+                    Need help using the application? Check out our documentation.
                   </p>
                   <Button variant="outline" asChild className="w-full">
                     <Link to="/dokumentacija">
-                      Odpri dokumentacijo
+                      Open documentation
                     </Link>
                   </Button>
                 </div>
@@ -213,7 +213,7 @@ const Kontakt = () => {
         {/* Simple Footer */}
         <footer className="border-t border-border/50 py-8">
           <div className="container-wide text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Label Designer PTI. Vse pravice pridržane.
+            © {new Date().getFullYear()} Label Designer PTI. All rights reserved.
           </div>
         </footer>
       </div>
