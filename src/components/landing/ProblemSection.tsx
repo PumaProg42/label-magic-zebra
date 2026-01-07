@@ -10,7 +10,7 @@ const problems = [{
 }, {
   icon: Plug,
   title: "Inconsistent print results",
-  description: "Gonilniki, nastavitve porta, ZPL koda... Zakaj mora biti tiskanje etiket tako zapleteno?"
+  description: "What you see on screen does not always match the printed label due to DPI differences, fonts or printer-specific behavior."
 }];
 const ProblemSection = () => {
   return <section className="section-padding bg-muted/30">
