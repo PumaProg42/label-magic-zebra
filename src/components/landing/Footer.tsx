@@ -35,9 +35,6 @@ const Footer = () => {
               <li>
                 <a href="#funkcionalnosti" className="hover:text-background transition-colors">Features</a>
               </li>
-              <li>
-                <a href="#cenik" className="hover:text-background transition-colors">Pricing</a>
-              </li>
             </ul>
           </div>
           

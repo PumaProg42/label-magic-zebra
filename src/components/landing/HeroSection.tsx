@@ -30,15 +30,11 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.perko-tehtnice.si/">
-                  Try 14 day FREE trial
+                  Try for free
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
             </div>
-            
-            <p className="text-sm text-muted-foreground">
-              No credit card required. No commitment.
-            </p>
           </div>
           
           {/* Right content - Editor preview image */}

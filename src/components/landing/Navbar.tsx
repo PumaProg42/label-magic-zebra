@@ -8,7 +8,6 @@ const Navbar = () => {
   const navLinks = [
     { name: "How it works", href: "#kako-deluje" },
     { name: "Features", href: "#funkcionalnosti" },
-    { name: "Pricing", href: "#cenik" },
     { name: "FAQ", href: "#faq" },
   ];
 
@@ -40,7 +39,7 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="gradient" asChild>
-              <a href="https://app.perko-tehtnice.si/">Dashboard</a>
+              <a href="https://app.perko-tehtnice.si/">Login</a>
             </Button>
           </div>
 
@@ -70,7 +69,7 @@ const Navbar = () => {
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
                 <Button variant="gradient" asChild>
-                  <a href="https://app.perko-tehtnice.si/">Dashboard</a>
+                  <a href="https://app.perko-tehtnice.si/">Login</a>
                 </Button>
               </div>
             </div>
