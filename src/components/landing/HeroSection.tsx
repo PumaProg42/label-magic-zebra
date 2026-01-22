@@ -16,16 +16,16 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left space-y-8">
-            <div className="space-y-6">
+            <header className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Design labels in your browser.{" "}
-                <span className="gradient-text">Print on any thermal printer.</span>
+                Professional Label Designer for{" "}
+                <span className="gradient-text">Zebra & Thermal Printers</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                A professional web-based label designer for industrial use.
-                Create, export and print labels without vendor lock-in.
+                Web-based label design software. Create barcodes, QR codes, and shipping labels. 
+                Export to ZPL format. No installation required.
               </p>
-            </div>
+            </header>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="xl" asChild>
