@@ -71,7 +71,7 @@ const UseCasesSection = () => {
                 <div className="bg-white rounded-xl p-2 sm:p-3 border border-border/50 shadow-sm group-hover:shadow-md transition-all duration-300 [perspective:1000px]">
                   <img 
                     src={useCase.image} 
-                    alt={`${useCase.title} example`}
+                    alt={`${useCase.title} - ${useCase.description} - Label Designer PTI thermal printer label example`}
                     className="w-full max-w-[200px] sm:max-w-[280px] mx-auto h-auto rounded-lg transition-transform duration-500 group-hover:[transform:rotateY(5deg)_rotateX(3deg)_scale(1.02)]"
                   />
                 </div>
