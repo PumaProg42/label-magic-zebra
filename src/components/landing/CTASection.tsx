@@ -20,7 +20,7 @@ const CTASection = () => {
                 <span className="gradient-text">5 minutes</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
-                Free trial. No credit card. No commitment.
+                Free trial. No credit card.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.perko-tehtnice.si/">
