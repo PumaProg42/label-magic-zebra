@@ -16,11 +16,11 @@ const CTASection = () => {
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Create your first label in{" "}
+                Design your first label in{" "}
                 <span className="gradient-text">5 minutes</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
-                Free trial. No credit card.
+                Try this browser label designer for free. No credit card required.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.perko-tehtnice.si/">

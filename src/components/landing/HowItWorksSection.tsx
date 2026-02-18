@@ -3,24 +3,24 @@ const steps = [{
   icon: MousePointer2,
   step: "01",
   title: "Design the label",
-  description: "Drag text, barcodes, QR codes and images onto the workspace. Set the label size in millimeters and adjust the DPI to match your printer."
+  description: "Drag text, barcodes, QR codes, and images onto the workspace. Set the label size in millimeters and adjust the DPI (203, 300, or 600 dpi) to match your thermal printer."
 }, {
   icon: FileText,
   step: "02",
   title: "Add content",
-  description: "Enter barcode data, label text and upload your logo. See an accurate preview of how the label will look when printed."
+  description: "Enter barcode data, label text, or dynamic label fields and upload your logo. See a real print preview of how the label will look when printed."
 }, {
   icon: Printer,
   step: "03",
-  title: "Print the label",
-  description: "Enter the printer's IP address and click Print. The label is printed within seconds. You can also export the printer-ready code for use in your ERP system."
+  title: "Print or export ZPL",
+  description: "Enter the printer's IP address and click Print for direct IP printer printing. You can also export the ZPL code for use in your ERP or WMS system."
 }];
 const HowItWorksSection = () => {
   return <section className="section-padding">
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Create your label in    <span className="gradient-text">3 steps </span>
+            Design and print labels in <span className="gradient-text">3 simple steps</span>
           </h2>
         </div>
         

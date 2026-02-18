@@ -18,12 +18,12 @@ const HeroSection = () => {
           <div className="text-center lg:text-left space-y-8">
             <header className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Professional Label Designer for{" "}
+                Online Label Designer for{" "}
                 <span className="gradient-text">Zebra & Thermal Printers</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                Web-based label design software. Create barcodes, QR codes, and shipping labels. 
-                Export to ZPL format. No installation required.
+                Browser-based barcode label software. Design shipping labels, warehouse labels, and product labels with barcodes and QR codes. 
+                Export to ZPL — no installation required.
               </p>
             </header>
             
