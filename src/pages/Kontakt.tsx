@@ -156,13 +156,13 @@ const Kontakt = () => {
                   
                   <div className="space-y-4">
                     <a 
-                      href="mailto:prodaja@perko-tehtnice.si" 
+                      href="mailto:info@label-designer.org" 
                       className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <Mail className="w-5 h-5 mt-0.5 text-primary" />
                       <div>
                         <p className="font-medium text-foreground">Email</p>
-                        <p>prodaja@perko-tehtnice.si</p>
+                        <p>info@label-designer.org</p>
                       </div>
                     </a>
 

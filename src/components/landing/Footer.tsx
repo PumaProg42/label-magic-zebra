@@ -19,8 +19,8 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-2 text-background/70">
               <Mail className="w-4 h-4" />
-              <a href="mailto:prodaja@perko-tehtnice.si" className="hover:text-background transition-colors">
-                prodaja@perko-tehtnice.si
+              <a href="mailto:info@label-designer.org" className="hover:text-background transition-colors">
+                info@label-designer.org
               </a>
             </div>
           </div>
