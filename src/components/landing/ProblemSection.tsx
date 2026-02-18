@@ -1,16 +1,16 @@
 import { Brain, Monitor, Plug, Sparkles } from "lucide-react";
 const problems = [{
   icon: Brain,
-  title: "Vendor-locked software",
-  description: "Many label tools only work with a specific printer brand, limiting flexibility and increasing long-term costs when hardware needs to change."
+  title: "Vendor-locked label software",
+  description: "Many label printing tools only work with a specific printer brand, limiting flexibility and increasing long-term costs when hardware needs to change."
 }, {
   icon: Monitor,
   title: "Complex desktop installations",
-  description: "Installation often requires drivers, local setup and IT support, making deployment slow and difficult across multiple workstations."
+  description: "Traditional thermal label software requires drivers, local setup, and IT support — making deployment slow and difficult across multiple workstations."
 }, {
   icon: Plug,
   title: "Inconsistent print results",
-  description: "What you see on screen does not always match the printed label due to DPI differences, fonts or printer-specific behavior."
+  description: "What you see on screen does not always match the printed label due to DPI differences (203, 300, 600 dpi), fonts, or printer-specific behavior."
 }];
 const ProblemSection = () => {
   return <section className="section-padding bg-muted/30">
@@ -18,7 +18,7 @@ const ProblemSection = () => {
         {/* Problems */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Label printing should not be complicated.
+            Label printing software should not be complicated
           </h2>
         </div>
         
@@ -47,11 +47,11 @@ const ProblemSection = () => {
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    Label Designer PTI simplifies  <span className="gradient-text">everything</span>
+                    Label Designer PTI simplifies <span className="gradient-text">everything</span>
                   </h3>
                   <p className="text-lg text-muted-foreground max-w-2xl">
-                    Open your browser, design the label by dragging elements, click Print. Done.
-Works on any computer — no installation, no per-workstation licenses.
+                    Open your browser, design the label by dragging elements, and print labels directly from the browser. Done.
+                    Works on any computer — no installation, no per-workstation licenses.
                   </p>
                 </div>
               </div>

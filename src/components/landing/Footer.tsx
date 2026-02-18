@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="font-bold text-xl">Label Designer PTI</span>
             </div>
             <p className="text-background/70 mb-6 max-w-sm">
-              Professional label design for thermal printers. Simple, fast, no installation required.
+              Online label designer for thermal printers. Design, preview, and print labels from your browser — no installation required.
             </p>
             <div className="flex items-center gap-2 text-background/70">
               <Mail className="w-4 h-4" />

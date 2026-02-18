@@ -7,16 +7,16 @@ import {
 
 const faqs = [
   {
-    question: "Is the application tied to a specific printer manufacturer?",
-    answer: "No. The application is fully vendor-agnostic. It works with all thermal printers that support standard printer languages such as ZPL, TSPL, EPL, CPCL, or RAW output.",
+    question: "Is the label designer tied to a specific printer manufacturer?",
+    answer: "No. This online label designer is fully vendor-agnostic. It works with all thermal printers that support standard printer languages such as ZPL, TSPL, EPL, CPCL, or RAW output.",
   },
   {
-    question: "Do I need special drivers or additional software for printing?",
-    answer: "Not necessarily. Labels can be printed directly over the network (IP + port) without drivers. If your environment requires it, alternative options are available, such as a local print agent or file export for external printing.",
+    question: "Do I need special drivers or additional software for label printing?",
+    answer: "Not necessarily. Labels can be printed directly via IP printer printing (IP + port) without drivers. If your environment requires it, alternative options are available, such as a local print agent or ZPL file export.",
   },
   {
     question: "Are label dimensions and element positions accurate?",
-    answer: "Yes. The application uses a precise WYSIWYG editor, where all positions and sizes are calculated based on the actual label dimensions and the selected DPI (203 / 300 / 600).",
+    answer: "Yes. The label designer uses a precise WYSIWYG editor with a real print preview, where all positions and sizes are calculated based on actual label dimensions and the selected DPI (203 dpi, 300 dpi, or 600 dpi).",
   },
   {
     question: "Can I save and reuse label templates?",

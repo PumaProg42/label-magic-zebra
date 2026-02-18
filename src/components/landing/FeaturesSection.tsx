@@ -1,35 +1,35 @@
 import { Type, BarChart3, QrCode, Image, Ruler, Cloud } from "lucide-react";
 const features = [{
   icon: Type,
-  title: "Text and placeholders",
-  description: "Add fixed text or dynamic fields that can be replaced by your ERP or WMS system. Control font, size and alignment."
+  title: "Text and dynamic label fields",
+  description: "Add fixed text or dynamic fields that can be replaced by your ERP or WMS system. Control font, size, and alignment."
 }, {
   icon: BarChart3,
   title: "All common barcode types",
-  description: "EAN-8, EAN-13 and Code 128 with automatic check digit calculation. Adjust width and height as needed."
+  description: "EAN-8, EAN-13, and Code 128 with automatic check digit calculation. Adjust barcode width and height as needed."
 }, {
   icon: QrCode,
   title: "QR codes",
-  description: "Generate QR codes for traceability, web links or custom data. Choose size and error correction level."
+  description: "Generate QR codes for traceability, web links, or custom data. Choose size and error correction level."
 }, {
   icon: Image,
   title: "Images and logos",
-  description: "Upload PNG or JPG images. They are automatically converted into a format suitable for thermal printing."
+  description: "Upload PNG or JPG images. They are automatically converted into a format suitable for thermal printer labels."
 }, {
   icon: Ruler,
-  title: "Precise positioning",
-  description: "Millimeter rulers, smart alignment guides and pixel-accurate coordinates for professional precision."
+  title: "Real print preview",
+  description: "Millimeter rulers, smart alignment guides, and pixel-accurate coordinates — what you see is what gets printed."
 }, {
   icon: Cloud,
-  title: "Cloud storage",
-  description: "Save your labels in the cloud and access them from any computer. No more lost files."
+  title: "Cloud label printing",
+  description: "Save your label templates in the cloud and access them from any computer. No more lost files."
 }];
 const FeaturesSection = () => {
   return <section className="section-padding bg-muted/30">
       <div className="container-wide">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Everything you need for  <span className="gradient-text">professional labels</span>
+            Everything you need in a <span className="gradient-text">thermal label software</span>
           </h2>
         </div>
         
